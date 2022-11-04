@@ -1,0 +1,89 @@
+.Admin{
+    display: flex;
+}
+
+.sidebar{
+    background-color: #0FD0D0;
+    color: white;
+    font-weight: bold;
+    width: 20%;
+    height: 100vh;
+    
+}
+.sidebar h1{
+    background-color: rgba(255,255,255, 0.9);
+    color: rgba(65, 105, 225, 0.7);
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+.sidebar ul{
+    font-size: 20px;
+}
+
+.sidebar ul li{
+    margin-top: 12%;
+}
+
+.sidebar ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar ul li i{
+    margin-right: 3%;
+}
+
+.body-content{
+    padding: 3%;
+    background-color: black;
+    width: 100%;
+}
+
+.top{
+    background-color: antiquewhite;
+    margin-left: 8%;
+}
+
+.error{
+    color: red;
+}
+
+.btns{
+    display: flex;
+    font-weight: bold;
+}
+.btns > .edit{
+    background-color: green;
+    color: white;
+}
+
+.btns > .delete{
+    background-color: red;
+    color: white;
+}
+
+.edit-unit{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 25%;
+}
+
+.admin-login{
+    margin: 10%;
+    margin-left: 30%;
+    width: 45%;
+    /* background-color: black; */
+    padding: 7%;
+}
+.admin-login > button{
+    width: 100%;
+}
+
+.unit-form{
+    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 212, 255, 1) 100%, rgba(15, 232, 240, 1) 100%);
+    padding: 2%;
+    color: white;
+}

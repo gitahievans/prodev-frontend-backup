@@ -1,0 +1,164 @@
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.spacedetails
+{
+    color: #0FD0D0;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    text-align: center;
+    margin-left: 215px;
+}
+
+
+
+
+.d-names
+{
+    color: aquamarine;
+}
+
+
+.section .section-center 
+{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-top: 160px;
+    padding-bottom: 90px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%)
+}
+
+
+
+.booking-form {
+    position: relative;
+    max-width: 842px;
+    width: 100%;
+    margin: auto;
+    padding: 40px;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 100%, rgba(15,232,240,1) 100%);;
+    background-size: cover;
+    border-radius: 5px;
+    z-index: 20;
+}
+
+.booking-form::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1
+}
+
+.booking-form .form-header {
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px
+}
+
+.booking-form .form-header h1 {
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 42px;
+    margin: 0px;
+    color: #0FD0D0;
+}
+
+.booking-form .form-group {
+    position: relative;
+    margin-bottom: 30px
+}
+
+.booking-form .form-control {
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 60px;
+    padding: 0px 25px;
+    border: none;
+    border-radius: 40px;
+    color: #fff;
+    -webkit-box-shadow: 0px 0px 0px 2px transparent;
+    box-shadow: 0px 0px 0px 2px transparent;
+    -webkit-transition: 0.2s;
+    transition: 0.2s
+}
+
+.booking-form .form-control::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.5)
+}
+
+.booking-form .form-control:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.5)
+}
+
+.booking-form .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5)
+}
+
+.booking-form .form-control:focus {
+    -webkit-box-shadow: 0px 0px 0px 2px #0FD0D0;
+    box-shadow: 0px 0px 0px 2px #0FD0D0
+}
+
+.form-text
+{
+    color:  #0FD0D0;
+    font-size: 18px;
+}
+
+.booking-form select.form-control option {
+    color: #000
+}
+
+.booking-form .form-label {
+    position: absolute;
+    top: -10px;
+    left: 25px;
+    opacity: 0;
+    color: #0FD0D0;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    height: 15px;
+    line-height: 15px;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all
+}
+
+
+
+.booking-form .submit-btn {
+    color: #fff;
+    background-color: #0FD0D0;
+    font-weight: 700;
+    height: 60px;
+    padding: 10px 30px;
+    width: 100%;
+    border-radius: 40px;
+    border: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1.3px;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all
+}
+
+.booking-form .submit-btn:hover,
+.booking-form .submit-btn:focus {
+    opacity: 0.9;
+}
