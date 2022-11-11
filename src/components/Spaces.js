@@ -1,6 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./spaces.css";
 
-function Spaces() {
+function Spaces({ getSpaceDetails }) {
+  const [content, setContent] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    fetch("/storage_units")
+      .then((r) => r.json())
+      .then((data) => setContent(data));
+  }, []);
+
+  function handleClick(params) {
+    getSpaceDetails(params);
+    navigate("/rentNow");
+  }
   return (
     <>
       {" "}

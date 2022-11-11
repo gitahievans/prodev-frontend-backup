@@ -33,7 +33,7 @@ function Navbar({ user, setUser }) {
             Storage-Center
           </Link>
         </div>
-       
+
         <ul className="nav-items">
           {navItems.map((item) => {
             if (item.title === "More") {
@@ -63,7 +63,7 @@ function Navbar({ user, setUser }) {
                 </Link>
               ) : null}
             </li>
-          
+
             <li>
               {user ? null : (
                 <Link to="/signup" className="logout">

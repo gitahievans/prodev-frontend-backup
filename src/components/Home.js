@@ -1,23 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
+import "react-router-dom";
 import AboutUs from "../pages/AboutUs";
 import Contact from "../pages/Contact";
 import "./home.css";
 
-function Home({ getSpaceDetails }) {
-  const [content, setContent] = useState([]);
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    fetch("/storage_units")
-      .then((r) => r.json())
-      .then((data) => setContent(data));
-  }, []);
-
-  function handleClick(params) {
-    getSpaceDetails(params);
-    navigate("/rentNow");
-  }
+function Home() {
   return (
     <>
       <div className="About-section">

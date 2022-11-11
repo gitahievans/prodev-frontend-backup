@@ -12,7 +12,7 @@ function SignUpForm() {
   // const [phone_number, setPhoneNumber] = useState(0);
   const navigate = useNavigate();
   const [errors, setErrors] = useState([]);
-  const [errorMessage, setErrorMessage] = useState("");
+  // const [errorMessage, setErrorMessage] = useState("");
 
   const [values, setValues] = useState({
     username: "",
@@ -28,29 +28,21 @@ function SignUpForm() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    if (values.password !== regex) {
-      setErrorMessage(
-        "Password should be 8-20 characters and include at least 1 letter, 1 number and 1 special character!"
-      );
-    } else if (values.confirmPassword !== values.password) {
-      setErrorMessage("Passwords do not match");
-    } else {
-      fetch("/clients", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
-      }).then((res) => {
-        if (res.ok) {
-          toast.success("Account created successfully");
-          navigate("/login");
-        } else {
-          res.json().then((errorData) => setErrors(errorData.errors));
-          toast.error("Could not create account");
-        }
-      });
-    }
+    fetch("/clients", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(values),
+    }).then((res) => {
+      if (res.ok) {
+        toast.success("Account created successfully");
+        navigate("/login");
+      } else {
+        res.json().then((errorData) => setErrors(errorData.errors));
+        toast.error("Could not create account");
+      }
+    });
   }
 
   const onChange = (e) => {
@@ -111,7 +103,6 @@ function SignUpForm() {
           />
           <label htmlFor="floatingInput">Password</label>
         </div>
-        <span>{errorMessage}</span>
         <div className="form-floating">
           <input
             type="text"

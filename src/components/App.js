@@ -5,6 +5,7 @@ import UserProfile from "../pages/UserProfile";
 import Contact from "../pages/Contact";
 import AboutUs from "../pages/AboutUs";
 import Dashboard from "./Dashboard";
+import Spaces from "./Spaces";
 import Navbar from "./Navbar";
 import { Navigate, Route, Routes } from "react-router-dom";
 import Home from "./Home";
@@ -25,7 +26,6 @@ function App() {
   const [spaceDetails, setSpaceDetails] = useState();
   const [user, setUser] = useState(false);
 
- 
   const handleSpaceDetails = (params) => {
     setSpaceDetails(params);
   };
@@ -46,6 +46,7 @@ function App() {
         <Route element={<ProtectedRoutes user={user} setUser={setUser} />}>
           <Route path="/UserProfile" element={<UserProfile user={user} />} />
           <Route path="/Contact" element={<Contact />} />
+          <Route path="/spaces" element={<Spaces />} />
           <Route path="/AboutUs" element={<AboutUs />} />{" "}
           <Route
             path="/rentNow"
