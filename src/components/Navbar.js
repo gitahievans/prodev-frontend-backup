@@ -25,12 +25,19 @@ function Navbar({ user, setUser }) {
   const [dropdown, setDropdown] = useState(false);
   return (
     <>
-      <nav className="navbar">
+      <div className="navbar">
         <div className="logo">
           {" "}
-          <img src={logo} alt="container" />
+          <img
+            className="container-logo"
+            src="https://cdn-icons-png.flaticon.com/512/2897/2897757.png"
+            alt="container"
+          />
           <Link to="/" className="navbar-logo">
-            Storage-Center
+            <p>
+              <span className="storage">STORAGE</span>
+              <span className="center">CENTER</span>
+            </p>
           </Link>
         </div>
 
@@ -80,7 +87,7 @@ function Navbar({ user, setUser }) {
             </li>
           </div>
         </ul>
-      </nav>
+      </div>
     </>
   );
 }

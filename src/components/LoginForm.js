@@ -41,7 +41,9 @@ function LoginPage({ user, setUser }) {
   return (
     <div className="login-container">
       <div className="login-form">
-        <h2>Login</h2>
+        <h2 className="logn">
+          <span>Storagecenter</span> |<span>Login</span>{" "}
+        </h2>
 
         <form onSubmit={handleSubmit}>
           <div className="form-floating mb-3">

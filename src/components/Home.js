@@ -9,7 +9,7 @@ function Home() {
     <>
       <div className="About-section">
         <img
-          src="https://images.pexels.com/photos/4484071/pexels-photo-4484071.jpeg?auto=compress&cs=tinysrgb&w=1600"
+          src="https://images.pexels.com/photos/4484078/pexels-photo-4484078.jpeg?auto=compress&cs=tinysrgb&w=1600"
           alt="person"
           className="about-img"
         />

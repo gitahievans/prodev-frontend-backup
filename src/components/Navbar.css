@@ -1,75 +1,96 @@
 .navbar {
-    height: 12vh;
-    background: linear-gradient(50deg, rgba(15, 208, 208, 1) 0%, rgba(0,0,0) 100%, rgba(0,0,0) 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .logo{
-    display: flex;
-    margin-left: 5px;
-  }
-  .navbar-logo {
-    color: white;
-    text-decoration: none;
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 300px;
-    
-  }
-  
-  
-  .nav-items {
-    display: flex;
-    list-style: none;
-    text-align: center;
-    width: 70vw;
-    justify-content: flex-end;
-    margin-right: 2rem;
-  }
-  
-  .nav-item {
-    display: flex;
-    align-items: center;
-    height: 10vh;
-  }
-  
-  .nav-item a {
-    text-decoration: none;
-    color: yellow;
-    font-size: 1.1rem;
-    margin-right: 3rem;
-    padding: 6px 16px;
-    border-radius: 10px;
-  
-  }
-  
-  .nav-item a:hover {
-    background: black;
-  }
-  .logout{
-    background:none;
-    border: none;
-    color: yellow;
-    
-  }
+  height: 13vh;
+  background: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .deps{
-    display: flex;
-    align-items: center;
-    margin-right: 5%;
-  }
+.logo {
+  display: flex;
+  margin-left: 5px;
+}
 
-  .deps > li{
-    margin: 5%;
-  }
+.navbar-logo {
+  color: black;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
 
-  .deps > li > a{
-    text-decoration: none;
-  }
+}
 
-  .deps > li > a:hover{
-    color: yellow;
-  }
+.storage {
+  color: #1430e9;
+  font-family: 'Lucida Sans';
+}
+
+.center {
+  color: #7009c5;
+  font-family: 'Lucida Sans';
+}
+
+.container-logo {
+  height: 80px;
+  width: auto;
+}
+
+.nav-items {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  width: 70vw;
+  justify-content: flex-end;
+  margin-right: 2rem;
+  font-family: 'Lucida Sans';
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+  margin-right: 3rem;
+  padding: 6px 16px;
+  border-radius: 10px;
+
+}
+
+.nav-item a:hover {
+  background: gainsboro;
+}
+
+.logout {
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+  margin-right: 3rem;
+  padding: 6px 16px;
+  border-radius: 10px;
+
+}
+
+.deps {
+  display: flex;
+  align-items: center;
+  margin-right: 5%;
+}
+
+.deps>li {
+  margin: 5%;
+}
+
+.deps>li>a {
+  text-decoration: none;
+}
+
+.deps>li>a:hover {
+  background: gainsboro;
+}

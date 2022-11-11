@@ -8,8 +8,8 @@
 }
 
 .login-form {
-  background: aliceblue;
-  width: 50vw;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.14889705882352944) 0%, rgba(245, 245, 245, 0.6446953781512605) 99%);
+  width: 60%;
   height: 70vh;
   display: flex;
   align-items: center;
@@ -17,6 +17,11 @@
   flex-direction: column;
   margin-top: 4%;
   border-radius: 20px;
+  font-family: 'Lucida Grande';
+}
+
+.logn {
+  margin-bottom: 30px;
 }
 
 .avatar {
