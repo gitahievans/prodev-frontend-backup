@@ -41,49 +41,44 @@ function LoginPage({ user, setUser }) {
   return (
     <div className="login-container">
       <div className="login-form">
-        <img
-          src="https://cdn-icons-png.flaticon.com/128/1177/1177568.png"
-          alt="Avatar"
-          className="avatar"
-        />
         <h2>Login</h2>
 
         <form onSubmit={handleSubmit}>
-          <div className="user">
-            <label className="labels">Username</label>
+          <div className="form-floating mb-3">
             <input
               type="text"
               name="user-name"
               onChange={(e) => setName(e.target.value)}
               required
               placeholder="Username"
-            />
+              className="form-control"
+              id="floatingInput"
+            />{" "}
+            <label htmlFor="floatingInput">Username</label>
           </div>
 
-          <div className="pass">
-            <label className="labels">Password</label>
-
+          <div className="form-floating mb-3">
             <input
               type="password"
               name="password"
               onChange={(e) => setPassword(e.target.value)}
               required
               placeholder="Password"
+              className="form-control"
+              id="floatingInput"
             />
+            <label htmlFor="floatingInput">Password</label>
           </div>
-
-          <button className="sign-btns" type="submit">
+          <button className="btn btn-primary" type="submit">
             Login
           </button>
         </form>
-      </div>
-      <div>
-        <button>
-          {" "}
-          <NavLink className="back" to="/">
-            Back to Homepage
+        <div id="already-sign">
+          <p className="already">Don't have an account?</p>
+          <NavLink className="back-to-signup" to="/signup">
+            Signup
           </NavLink>
-        </button>
+        </div>
       </div>
     </div>
   );
