@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate }  from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./Admin.css";
 
 const Admin = () => {
@@ -8,7 +8,7 @@ const Admin = () => {
     username: "",
     password: "",
   });
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [errors, setErrors] = useState("");
   function handleChange(e) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -24,13 +24,12 @@ const Admin = () => {
     }).then((r) => {
       if (r.ok) {
         r.json().then((data) => console.log(data));
-        navigate('/admin/dashboard')
-        console.log("logged in successfull")
+        navigate("/admin/dashboard");
+        console.log("logged in successfull");
       } else {
         r.json().then((err) => setErrors(err.error));
       }
     });
-    
   }
 
   return (
@@ -58,7 +57,7 @@ const Admin = () => {
         />
         <label htmlFor="floatingPassword">Password</label>
       </div>
-      <button type="submit" className="btn btn-primary">
+      <button type="submit" id="admin-login" className="btn btn-primary">
         Login
       </button>
     </form>

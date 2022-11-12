@@ -24,6 +24,7 @@ body {
     margin-left: 1%;
     width: 550px;
     height: 400px;
+    transition: transform 800ms ease-in;
 }
 
 /* styling about */
@@ -55,4 +56,8 @@ body {
     margin-top: 20px;
     line-height: 40px;
     letter-spacing: 1px;
+}
+
+.about-img:hover {
+    transform: scale(1.01);
 }

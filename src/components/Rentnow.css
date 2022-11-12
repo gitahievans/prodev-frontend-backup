@@ -20,10 +20,12 @@
 }
 
 .spacedetails {
-    color: black;
+    width: 100%;
+    color: rgb(0, 68, 255);
+    font-size: 20px;
     display: flex;
-    flex-direction: column;
     text-align: center;
+    justify-content: space-around;
 }
 
 .form-inputs {
@@ -46,16 +48,24 @@
 }
 
 .form-control {
-    background-color: rgb(95, 102, 109);
+    background-color: rgb(174, 203, 230);
     height: 50px;
     padding: 0px 25px;
     border: none;
     border-radius: 40px;
-    color: #fff;
+    color: black;
     -webkit-box-shadow: 0px 0px 0px 2px transparent;
     box-shadow: 0px 0px 0px 2px transparent;
     -webkit-transition: 0.2s;
     transition: 0.7s
+}
+
+.form-control:hover {
+    background-color: rgba(163, 177, 192, 0.2);
+}
+
+.form-control:focus {
+    background-color: white;
 }
 
 
@@ -79,7 +89,6 @@
     margin-top: 3%;
     height: 45px;
     padding: 10px 30px;
-    width: 100%;
     border-radius: 40px;
     text-transform: uppercase;
     font-size: 16px;

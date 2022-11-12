@@ -1,68 +1,75 @@
-.Admin{
+.Admin {
     display: flex;
 }
 
-.sidebar{
+#admin-login {
+    width: auto;
+}
+
+.sidebar {
     background-color: #0FD0D0;
     color: white;
     font-weight: bold;
     width: 20%;
     height: 100vh;
-    
+
 }
-.sidebar h1{
-    background-color: rgba(255,255,255, 0.9);
+
+.sidebar h1 {
+    background-color: rgba(255, 255, 255, 0.9);
     color: rgba(65, 105, 225, 0.7);
     margin-bottom: 10%;
     margin-top: 10%;
 }
-.sidebar ul{
+
+.sidebar ul {
     font-size: 20px;
 }
 
-.sidebar ul li{
+.sidebar ul li {
     margin-top: 12%;
 }
 
-.sidebar ul li a{
+.sidebar ul li a {
     color: white;
     text-decoration: none;
 }
 
-.sidebar ul li i{
+.sidebar ul li i {
     margin-right: 3%;
 }
 
-.body-content{
+.body-content {
     padding: 3%;
     background-color: black;
     width: 100%;
 }
 
-.top{
+.top {
     background-color: antiquewhite;
     margin-left: 8%;
 }
 
-.error{
+.error {
     color: red;
 }
 
-.btns{
+.btns {
     display: flex;
     font-weight: bold;
 }
-.btns > .edit{
+
+.btns>.edit {
     background-color: green;
     color: white;
 }
 
-.btns > .delete{
+.btns>.delete {
     background-color: red;
     color: white;
 }
 
-.edit-unit{
+.edit-unit {
     width: fit-content;
     display: flex;
     flex-direction: column;
@@ -71,18 +78,22 @@
     margin-left: 25%;
 }
 
-.admin-login{
+.admin-login {
     margin: 10%;
     margin-left: 30%;
     width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     /* background-color: black; */
     padding: 7%;
 }
-.admin-login > button{
+
+.admin-login>button {
     width: 100%;
 }
 
-.unit-form{
+.unit-form {
     background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 212, 255, 1) 100%, rgba(15, 232, 240, 1) 100%);
     padding: 2%;
     color: white;
