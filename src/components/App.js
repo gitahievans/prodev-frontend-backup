@@ -34,10 +34,7 @@ function App() {
     <div className="App">
       <Navbar user={user} setUser={setUser} />
       <Routes>
-        <Route
-          path="/"
-          element={<Home getSpaceDetails={handleSpaceDetails} />}
-        />
+        <Route path="/" element={<Home />} />
         <Route
           path="/login"
           element={<LoginForm user={user} setUser={setUser} />}
@@ -46,7 +43,10 @@ function App() {
         <Route element={<ProtectedRoutes user={user} setUser={setUser} />}>
           <Route path="/UserProfile" element={<UserProfile user={user} />} />
           <Route path="/Contact" element={<Contact />} />
-          <Route path="/spaces" element={<Spaces />} />
+          <Route
+            path="/spaces"
+            element={<Spaces getSpaceDetails={handleSpaceDetails} />}
+          />
           <Route path="/AboutUs" element={<AboutUs />} />{" "}
           <Route
             path="/rentNow"
