@@ -42,7 +42,7 @@ function LoginPage({ user, setUser }) {
     <div className="login-container">
       <div className="login-form">
         <h2 className="logn">
-          <span>Storagecenter</span> |<span>Login</span>{" "}
+          <span>Storagecenter</span> | <span>Login</span>{" "}
         </h2>
 
         <form onSubmit={handleSubmit}>

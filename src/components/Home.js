@@ -3,6 +3,7 @@ import "react-router-dom";
 import AboutUs from "../pages/AboutUs";
 import Contact from "../pages/Contact";
 import "./home.css";
+import "../pages/footer.css";
 
 function Home() {
   return (
@@ -27,6 +28,14 @@ function Home() {
       </div>
       <AboutUs />
       <Contact />
+      <footer>
+        <p>
+          Copyright <i class="fa-solid fa-copyright"></i>
+          2022 StorageCenter, Inc
+        </p>
+        <p>Terms of service</p>
+        <p>Privacy policy</p>
+      </footer>
     </>
   );
 }

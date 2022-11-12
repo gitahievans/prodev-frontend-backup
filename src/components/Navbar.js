@@ -28,11 +28,11 @@ function Navbar({ user, setUser }) {
       <div className="navbar">
         <div className="logo">
           {" "}
-          <img
+          {/* <img
             className="container-logo"
             src="https://cdn-icons-png.flaticon.com/512/2897/2897757.png"
             alt="container"
-          />
+  />*/}
           <Link to="/" className="navbar-logo">
             <p>
               <span className="storage">STORAGE</span>

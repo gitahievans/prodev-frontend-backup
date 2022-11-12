@@ -19,7 +19,8 @@
 
 .signup-form {
     border-radius: 20px;
-    background-color: aliceblue;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.14889705882352944) 0%, rgba(245, 245, 245, 0.6446953781512605) 99%);
+    ;
     width: 50vw;
     height: 70vh;
     display: flex;
