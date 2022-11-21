@@ -16,7 +16,6 @@ export const navItems = [
   {
     id: 3,
     title: "More",
-    path: "./more",
     cName: "nav-item",
   },
 ];
@@ -26,6 +25,11 @@ export const moreDropdown = [
     id: 1,
     title: "Profile",
     path: "./UserProfile",
+    cName: "submenu-item",
+  },
+  {
+    id: 2,
+    title: "Logout",
     cName: "submenu-item",
   },
 ];

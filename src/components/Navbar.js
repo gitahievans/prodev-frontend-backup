@@ -16,7 +16,7 @@ function Navbar({ user, setUser }) {
     }).then((r) => {
       if (r.ok) {
         setUser(null);
-        navigate("/signup");
+        navigate("/login");
         toast.success("Logged out successfully");
       }
     });
@@ -37,7 +37,7 @@ function Navbar({ user, setUser }) {
 
         <ul className="nav-items">
           {navItems.map((item) => {
-            if (item.title === "More") {
+            if (item.title === "More" && user) {
               return (
                 <li
                   key={item.id}
