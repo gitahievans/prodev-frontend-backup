@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from "react";
-import { useNavigate, Link, NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate, NavLink } from "react-router-dom";
 import "./signup.css";
 import { toast } from "react-toastify";
 
@@ -11,7 +11,7 @@ function SignUpForm() {
   // const [showPassword, setShowPassword] = useState(false);
   // const [phone_number, setPhoneNumber] = useState(0);
   const navigate = useNavigate();
-  const [errors, setErrors] = useState([]);
+  // const [errors, setErrors] = useState([]);
   // const [errorMessage, setErrorMessage] = useState("");
 
   const [values, setValues] = useState({
@@ -23,7 +23,7 @@ function SignUpForm() {
     showPassword: false,
   });
 
-  const regex = "`^(?=.*[A-Za-z])(?=.*d)[A-Za-zd]{8,}$`";
+  // const regex = "`^(?=.*[A-Za-z])(?=.*d)[A-Za-zd]{8,}$`";
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -39,7 +39,7 @@ function SignUpForm() {
         toast.success("Account created successfully");
         navigate("/login");
       } else {
-        res.json().then((errorData) => setErrors(errorData.errors));
+        // res.json().then((errorData) => setErrors(errorData.errors));
         toast.error("Could not create account");
       }
     });

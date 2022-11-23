@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../components/images/container 1.png";
 import "./Navbar.css";
 import { navItems } from "./NavItems";
 import Dropdown from "./Dropdown";

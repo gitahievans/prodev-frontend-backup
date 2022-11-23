@@ -1,15 +1,13 @@
-import React from 'react'
+import React from "react";
 // import NewStaff from './ NewStaff'
-import NewUnit from './NewUnit'
+import NewUnit from "./NewUnit";
 // import UpdateUnit from './UpdateUnit'
 // import './Admin.css'
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 const Dashboard = () => {
-
-
-    function handleLogout() {
-        console.log("Logged out successfully")
-    }
+  function handleLogout() {
+    console.log("Logged out successfully");
+  }
   return (
     <div className="Admin">
       <div className="sidebar">
@@ -43,7 +41,7 @@ const Dashboard = () => {
           </li> */}
           <li>
             <Link to="">
-              <button onClick={()=>handleLogout()}>Logout</button>
+              <button onClick={() => handleLogout()}>Logout</button>
             </Link>
           </li>
         </ul>
@@ -53,10 +51,9 @@ const Dashboard = () => {
         <div className="top">
           <NewUnit />
         </div>
-        
       </div>
     </div>
   );
-}
+};
 
-export default Dashboard
+export default Dashboard;

@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
-// import UpdateUnit from "./UpdateUnit";
 const Available = () => {
   const [units, setUnits] = useState([]);
-  const [show, setShow] = useState(false);
+  // const [show, setShow] = useState(false);
   useEffect(() => {
     fetch("/storage_units")
       .then((r) => r.json())
       .then((data) => setUnits(data));
   }, []);
-console.log(units)
+  console.log(units);
   function handleShow() {
     // setShow(() => !show);
     // console.log(show);
     <Navigate to="/edit" />;
-    console.log("redirecting to edit")
+    console.log("redirecting to edit");
   }
 
   function handleDelete(item) {
