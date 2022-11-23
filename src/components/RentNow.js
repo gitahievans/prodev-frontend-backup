@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -11,7 +11,7 @@ function RentNow({ spaceDetails }) {
   const [goods, setGoods] = useState("");
   const [pickupStatus, setPickupStatus] = useState("");
   const [deliveryStatus, setDeliveryStatus] = useState("");
-  const [errors, setErrors] = useState("");
+  // const [errors, setErrors] = useState("");
   const navigate = useNavigate();
 
   let spaceId = spaceDetails.id;
@@ -36,7 +36,7 @@ function RentNow({ spaceDetails }) {
         toast.success("Storage unit booked successfully");
         navigate("/");
       } else {
-        res.json().then((data) => setErrors(data.error));
+        // res.json().then((data) => setErrors(data.error));
         toast.error("An erorr occurred");
       }
     });
@@ -61,7 +61,7 @@ function RentNow({ spaceDetails }) {
           </p>
           <p>
             <span className="d-names">Availability</span> |
-            {spaceDetails.status == true ? "Available✅" : "Not Available ❎"}
+            {spaceDetails.status === true ? "Available✅" : "Not Available ❎"}
           </p>
         </div>
         <form className="form-inputs" onSubmit={handleSubmit}>

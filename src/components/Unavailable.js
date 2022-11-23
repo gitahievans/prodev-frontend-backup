@@ -3,7 +3,7 @@ import { Navigate } from "react-router-dom";
 // import UpdateUnit from "./UpdateUnit";
 const Unavailable = () => {
   const [units, setUnits] = useState([]);
-  const [show, setShow] = useState(false);
+  // const [show, setShow] = useState(false);
   useEffect(() => {
     fetch("/storage_units")
       .then((r) => r.json())
@@ -13,7 +13,7 @@ const Unavailable = () => {
   function handleShow() {
     // setShow(() => !show);
     // console.log(show);
-    <Navigate to='/edit'/>
+    <Navigate to="/edit" />;
   }
   function handleDelete(item) {
     console.log(item.id);
@@ -47,8 +47,15 @@ const Unavailable = () => {
                 <td>{unit.size}</td>
                 <td>{unit.price}</td>
                 <td>
-                  <button className="btn btn-primary" onClick={handleShow()}>Edit</button>
-                  <button className="btn btn-danger" onClick={handleDelete(unit)}>Delete</button>
+                  <button className="btn btn-primary" onClick={handleShow()}>
+                    Edit
+                  </button>
+                  <button
+                    className="btn btn-danger"
+                    onClick={handleDelete(unit)}
+                  >
+                    Delete
+                  </button>
                 </td>
               </tr>
             </tbody>

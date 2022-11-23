@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import SignUpForm from "./SignUpForm";
 import LoginForm from "./LoginForm";
 import UserProfile from "../pages/UserProfile";
@@ -7,7 +7,7 @@ import AboutUs from "../pages/AboutUs";
 import Dashboard from "./Dashboard";
 import Spaces from "./Spaces";
 import Navbar from "./Navbar";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./Home";
 import NewStaff from "./NewStaff";
 import Booked from "./Booked";
