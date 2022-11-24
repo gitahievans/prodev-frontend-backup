@@ -52,7 +52,10 @@ function App() {
             path="/rentNow"
             element={<RentNow spaceDetails={spaceDetails} />}
           />
-          <Route path="/admin/dashboard" element={<Dashboard />} />
+          <Route
+            path="/admin/dashboard"
+            element={<Dashboard user={user} setUser={setUser} />}
+          />
           <Route path="/newstaff" element={<NewStaff />} />
           <Route path="/booked" element={<Booked />} />
           <Route path="/available" element={<Available />} />

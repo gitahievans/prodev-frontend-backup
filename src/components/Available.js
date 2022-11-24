@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
+
 const Available = () => {
   const [units, setUnits] = useState([]);
   // const [show, setShow] = useState(false);
@@ -27,7 +28,7 @@ const Available = () => {
   }
 
   return (
-    <div className="">
+    <div>
       <table className="table table-dark table-striped">
         <thead>
           <tr>
@@ -35,7 +36,6 @@ const Available = () => {
             <th scope="col">Unit Number</th>
             <th scope="col">Unit Size</th>
             <th scope="col">Unit Price</th>
-            <th scope="col">Actions</th>
           </tr>
         </thead>
         {units
@@ -47,17 +47,18 @@ const Available = () => {
                 <td>{unit.name}</td>
                 <td>{unit.size}</td>
                 <td>{unit.price}</td>
-                <td>price</td>
                 <td>
-                  <button className="btn btn-primary" onClick={handleShow()}>
-                    Edit
-                  </button>
-                  <button
-                    className="btn btn-danger"
-                    onClick={handleDelete(unit)}
-                  >
-                    Delete
-                  </button>
+                  <div className="available-btns">
+                    <button className="btn btn-primary" onClick={handleShow()}>
+                      Edit
+                    </button>
+                    <button
+                      className="btn btn-danger"
+                      onClick={handleDelete(unit)}
+                    >
+                      Delete
+                    </button>
+                  </div>
                 </td>
               </tr>
             </tbody>

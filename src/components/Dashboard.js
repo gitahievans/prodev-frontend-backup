@@ -2,12 +2,26 @@ import React from "react";
 // import NewStaff from './ NewStaff'
 import NewUnit from "./NewUnit";
 // import UpdateUnit from './UpdateUnit'
-// import './Admin.css'
+import "./Admin.css";
 import { Link } from "react-router-dom";
-const Dashboard = () => {
-  function handleLogout() {
-    console.log("Logged out successfully");
-  }
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+
+const Dashboard = ({ user, setUser }) => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    fetch(`/staff/${user.id}`, {
+      method: "DELETE",
+    }).then((r) => {
+      if (r.ok) {
+        setUser(null);
+        navigate("/login");
+        toast.success("Logged out successfully");
+      }
+    });
+  };
+
   return (
     <div className="Admin">
       <div className="sidebar">
@@ -41,7 +55,9 @@ const Dashboard = () => {
           </li> */}
           <li>
             <Link to="">
-              <button onClick={() => handleLogout()}>Logout</button>
+              <button onClick={() => handleLogout()} className="btn btn-danger">
+                Logout
+              </button>
             </Link>
           </li>
         </ul>
