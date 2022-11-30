@@ -16,6 +16,7 @@ function Navbar({ user, setUser }) {
       if (r.ok) {
         setUser(null);
         navigate("/login");
+        localStorage.removeItem('User');
         toast.success("Logged out successfully");
       }
     });

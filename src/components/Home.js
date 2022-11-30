@@ -30,7 +30,7 @@ function Home() {
       <Contact />
       <footer>
         <p>
-          Copyright <i class="fa-solid fa-copyright"></i>
+          Copyright <i className="fa-solid fa-copyright"></i>
           2022 StorageCenter, Inc
         </p>
         <p>Terms of service</p>

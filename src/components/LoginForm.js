@@ -24,7 +24,7 @@ function LoginPage({ user, setUser }) {
     }).then((res) => {
       if (res.ok) {
         res.json().then((data) => setUser(data));
-        console.log(user);
+        console.log("this is the user", user);
         toast.success("Login successful");
         navigate("/");
       } else {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SignUpForm from "./SignUpForm";
 import LoginForm from "./LoginForm";
 import UserProfile from "../pages/UserProfile";
@@ -24,7 +24,16 @@ import UpdateUnit from "./UpdateUnit";
 
 function App() {
   const [spaceDetails, setSpaceDetails] = useState();
-  const [user, setUser] = useState(false);
+  const [user, setUser] = useState(() => {
+    // getting stored value
+    const saved = localStorage.getItem("User");
+    const initialValue = JSON.parse(saved);
+    return initialValue || false;
+  });
+
+  useEffect(()=>{
+    localStorage.setItem('User', JSON.stringify(user))
+  },[user])
 
   const handleSpaceDetails = (params) => {
     setSpaceDetails(params);
