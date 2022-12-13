@@ -6,7 +6,7 @@ const UserProfile = ({ user }) => {
   const booking = user.bookings;
 
   const handleClick = () => {
-    fetch(`bookings/`, {
+    fetch(`https://storagecenter.onrender.com/bookings/`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

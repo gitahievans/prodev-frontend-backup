@@ -12,7 +12,7 @@ function LoginPage({ user, setUser }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("/login/client", {
+    fetch("https://storagecenter.onrender.com/login/client", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

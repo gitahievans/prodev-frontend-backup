@@ -24,7 +24,7 @@ const UpdateUnit = ({id}) => {
     e.preventDefault();
     console.log(state);
 
-    fetch("/storage_units", {
+    fetch("https://storagecenter.onrender.com/storage_units", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

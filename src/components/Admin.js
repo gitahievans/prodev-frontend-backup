@@ -15,7 +15,7 @@ const Admin = () => {
   }
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("/login/staff", {
+    fetch("https://storagecenter.onrender.com/login/staff", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

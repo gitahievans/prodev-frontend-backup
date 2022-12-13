@@ -28,7 +28,7 @@ function SignUpForm() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    fetch("/clients", {
+    fetch("https://storagecenter.onrender.com/clients", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

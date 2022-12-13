@@ -10,13 +10,13 @@ function Navbar({ user, setUser }) {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    fetch(`/clients/${user.id}`, {
+    fetch(`https://storagecenter.onrender.com/clients/${user.id}`, {
       method: "DELETE",
     }).then((r) => {
       if (r.ok) {
         setUser(null);
         navigate("/login");
-        localStorage.removeItem('User');
+        localStorage.removeItem("User");
         toast.success("Logged out successfully");
       }
     });
