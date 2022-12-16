@@ -17,7 +17,7 @@ export const navItems = [
     id: 3,
     title: "More",
     cName: "nav-item",
-  },
+  }
 ];
 
 export const moreDropdown = [

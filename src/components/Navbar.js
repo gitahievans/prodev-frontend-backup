@@ -48,6 +48,7 @@ function Navbar({ user, setUser }) {
                   <Link to={item.path}>{item.title}</Link>
                   {dropdown && <Dropdown />}
                 </li>
+                
               );
             }
             return (
@@ -80,7 +81,9 @@ function Navbar({ user, setUser }) {
               ) : null}
             </li>
           </div>
+     
         </ul>
+        <i class="fa-solid fa-bars"></i>
       </div>
     </>
   );

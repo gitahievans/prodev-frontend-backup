@@ -45,6 +45,7 @@
   justify-content: flex-end;
   margin-right: 2rem;
   font-family: 'Lucida Sans';
+  /* border: 1px saddlebrown solid; */
 }
 
 .nav-item {
@@ -93,4 +94,38 @@
 
 .deps>li>a:hover {
   background: gainsboro;
+}
+.fa-bars{
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .nav-items{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(12, 12, 56);
+  }
+  .nav-item{
+      border: 1px solid white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 70px;
+      width: 100%;
+      margin: 2%;
+      
+  }
+  .nav-item>a{
+    color: white;
+    font-weight: bold;
+  }
+  .fa-bars{
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  
 }
