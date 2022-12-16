@@ -4,9 +4,9 @@ import { useState } from 'react'
 const Clients = () => {
   const[clients, setClients] = useState([])
   useEffect(() => {
-    fetch('/clients')
-      .then(r => r.json())
-    .then(data => setClients(data))
+    fetch("./clients")
+      .then((r) => r.json())
+      .then((data) => setClients(data));
   })
   return (
     <div>

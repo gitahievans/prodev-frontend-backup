@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 
-const UpdateUnit = ({id}) => {
+const UpdateUnit = ({unit}) => {
 
   const [state, setState] = useState({
     name: "",
@@ -24,7 +24,7 @@ const UpdateUnit = ({id}) => {
     e.preventDefault();
     console.log(state);
 
-    fetch("/storage_units", {
+    fetch(`./storage_units/${unit.id}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -52,6 +52,7 @@ const UpdateUnit = ({id}) => {
             type="number"
             name="name"
             onChange={onChange}
+            defaultValue={unit.id}
             className="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
@@ -65,6 +66,7 @@ const UpdateUnit = ({id}) => {
             type="text"
             name="image_url"
             onChange={onChange}
+            defaultValue={unit.image_url}
             className="form-control"
             id="exampleInputPassword1"
           />
@@ -78,6 +80,7 @@ const UpdateUnit = ({id}) => {
             type="text"
             name="price"
             onChange={onChange}
+            defaultValue={unit.price}
             className="form-control"
             id="exampleInputPassword1"
           />

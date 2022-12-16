@@ -61,3 +61,33 @@ body {
 .about-img:hover {
     transform: scale(1.01);
 }
+
+@media (max-width: 900px) {
+    .About-section {
+        height: 550px;
+        background-color: white;
+       
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+        padding: 7%;
+        overflow: hidden;
+    }
+
+    .about{
+   
+        width: 100%;
+    }
+    .title{
+        align-self: center;
+        width: 75%;
+    
+    }
+    .about-img{
+        width: 50%;
+        height: 50%;
+        border-radius: 20%;
+        margin-top: 20px;
+    }
+}

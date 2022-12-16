@@ -15,7 +15,9 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 4%;
+  margin-top: 1%;
+  padding: 5%;
+  border: 2px solid purple;
   border-radius: 20px;
   font-family: 'Lucida Grande';
 }
@@ -42,10 +44,16 @@
   font-size: 18px;
 }
 
-
-
-
-
+.login-form form{
+  padding: 2%;
+  width: 100%;
+}
+.login-form form input{
+  width: 100%;
+}
+.login-form form button{
+  width: 100%;
+}
 
 
 
