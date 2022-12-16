@@ -71,3 +71,52 @@
 .card button:hover {
   opacity: 0.7;
 }
+
+@media (max-width: 900px) {
+  .contacts-container{
+      height: 550px;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20%;
+    padding: 7%;
+      /* overflow: hidden; */
+  }
+  .emails{
+    
+    display: flex;
+    width: 45%;
+    margin: 2.5%;
+    padding: 2%;
+  }
+  .socials, .phone, .address{
+    
+    display: flex;
+    margin: 2.5%;
+    padding: 2%;
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contacts-container{
+      height: 550px;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20%;
+    
+    padding: 7%;
+      /* overflow: hidden; */
+  }
+  .emails{
+    font-size: 14px; 
+  }
+  .socials, .phone, .address{
+    font-size: 14px;
+  }
+}
