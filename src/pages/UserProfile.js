@@ -45,10 +45,20 @@ const UserProfile = ({ user }) => {
         email: email,
         phone_number: phoneNumber,
       }),
-    })
-      .then((res) => res.json())
-      // ***toaST**
-  }
+    }).then((res) => {
+      if (res.ok) {
+        toast.success(
+          "Personal details updated successfully. Changes will be reflected in your next login"
+        );
+      }
+      else{
+        res.json().then((data) => {
+        console.log(data);
+        toast.error("Could not update personal details")
+      })
+    };
+   }
+  )}
 
   return (
     <div className="user-profile">
