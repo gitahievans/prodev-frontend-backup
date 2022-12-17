@@ -24,6 +24,7 @@ import UpdateUnit from "./UpdateUnit";
 
 function App() {
   const [spaceDetails, setSpaceDetails] = useState();
+
   const [user, setUser] = useState(() => {
     // getting stored value
     const saved = localStorage.getItem("User");
@@ -31,9 +32,9 @@ function App() {
     return initialValue || false;
   });
 
-  useEffect(()=>{
-    localStorage.setItem('User', JSON.stringify(user))
-  },[user])
+  useEffect(() => {
+    localStorage.setItem("User", JSON.stringify(user));
+  }, [user]);
 
   const handleSpaceDetails = (params) => {
     setSpaceDetails(params);

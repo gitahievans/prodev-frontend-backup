@@ -10,7 +10,8 @@ function Navbar({ user, setUser }) {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    fetch(`https://storagecenter.onrender.com/clients/${user.id}`, {
+    // fetch(`https://storagecenter.onrender.com/clients/${user.id}`, 
+    fetch(`clients/${user.id}`, {
       method: "DELETE",
     }).then((r) => {
       if (r.ok) {

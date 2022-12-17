@@ -16,7 +16,8 @@ console.log(values);
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    fetch("https://storagecenter.onrender.com/staff", {
+    // fetch("https://storagecenter.onrender.com/staff", 
+    fetch("staff", {
       method: "POST",
       headers: {
         "Content-Type": "applcation/json",

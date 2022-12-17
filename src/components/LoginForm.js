@@ -7,35 +7,35 @@ import { toast } from "react-toastify";
 function LoginPage({ user, setUser }) {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
-  // const [user, setUser] = useState([]);
   const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("https://storagecenter.onrender.com/login/client", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        username: name,
-        password: password,
-      }),
-    }).then((res) => {
-      if (res.ok) {
-        res.json().then((data) => setUser(data));
-        console.log("this is the user", user);
-        toast.success("Login successful");
-        navigate("/");
-      } else {
-        res.json().then((data) => {
-          console.log(data.error);
-          toast.error(
-            "Login failed! Please check your email address and password, and then try again."
-          );
-        });
-      }
-    });
+    // fetch("https://storagecenter.onrender.com/login/client", 
+     fetch("login/client", {
+       method: "POST",
+       headers: {
+         "Content-Type": "application/json",
+       },
+       body: JSON.stringify({
+         username: name,
+         password: password,
+       }),
+     }).then((res) => {
+       if (res.ok) {
+         res.json().then((data) => setUser(data));
+         console.log("this is the user", user);
+         toast.success("Login successful");
+         navigate("/");
+       } else {
+         res.json().then((data) => {
+           console.log(data.error);
+           toast.error(
+             "Login failed! Please check your email address and password, and then try again."
+           );
+         });
+       }
+     });
   }
 
   return (

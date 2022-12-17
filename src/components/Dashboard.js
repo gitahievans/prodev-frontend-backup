@@ -11,7 +11,8 @@ const Dashboard = ({ user, setUser }) => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    fetch(`https://storagecenter.onrender.com/staff/${user.id}`, {
+    // fetch(`https://storagecenter.onrender.com/staff/${user.id}`, 
+    fetch(`staff/${user.id}`, {
       method: "DELETE",
     }).then((r) => {
       if (r.ok) {

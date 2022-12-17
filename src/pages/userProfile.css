@@ -27,7 +27,7 @@
 
 #prfl-update {
     width: auto;
-    margin-top: 25%;
+    margin-top: 15%;
 }
 
 #prfl-update:hover {
@@ -119,3 +119,25 @@
         transform: translate3d(4px, 0, 0);
     }
 }
+
+
+/* UPDATE FORM */
+.update-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+.update-form form {
+    height: 200px;
+    width: 300px;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.update-form form input{
+    width: 100%;
+}
+

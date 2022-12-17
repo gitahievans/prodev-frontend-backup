@@ -4,9 +4,10 @@ import { useState } from 'react'
 const Clients = () => {
   const[clients, setClients] = useState([])
   useEffect(() => {
-    fetch("https://storagecenter.onrender.com/clients")
-      .then((r) => r.json())
-      .then((data) => setClients(data));
+    // fetch("https://storagecenter.onrender.com/clients")
+     fetch("clients")
+       .then((r) => r.json())
+       .then((data) => setClients(data));
   })
   return (
     <div>
