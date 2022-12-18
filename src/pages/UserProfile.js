@@ -18,7 +18,9 @@ const UserProfile = ({ user }) => {
     fetch("bookings")
       .then((r) => r.json())
       .then((data) => setBookings(data));
-  });
+  },[]);
+
+  // console.log(bookings);
 
   const handleClick = () => {
     // fetch(`https://storagecenter.onrender.com/bookings/`,
@@ -50,15 +52,14 @@ const UserProfile = ({ user }) => {
         toast.success(
           "Personal details updated successfully. Changes will be reflected in your next login"
         );
-      }
-      else{
+      } else {
         res.json().then((data) => {
-        console.log(data);
-        toast.error("Could not update personal details")
-      })
-    };
-   }
-  )}
+          console.log(data);
+          toast.error("Could not update personal details");
+        });
+      }
+    });
+  }
 
   return (
     <div className="user-profile">
