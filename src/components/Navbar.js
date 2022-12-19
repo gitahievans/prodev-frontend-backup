@@ -10,8 +10,7 @@ function Navbar({ user, setUser }) {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    // fetch(`https://storagecenter.onrender.com/clients/${user.id}`, 
-    fetch(`clients/${user.id}`, {
+    fetch(`/clients/${user.id}`, {
       method: "DELETE",
     }).then((r) => {
       if (r.ok) {
@@ -82,6 +81,7 @@ function Navbar({ user, setUser }) {
             </li>
           </div>
         </ul>
+        <i class="fa-solid fa-bars"></i>
       </div>
     </>
   );

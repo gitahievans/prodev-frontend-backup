@@ -54,10 +54,59 @@ body {
 .about-text {
     font-size: 19px;
     margin-top: 20px;
-    line-height: 40px;
-    letter-spacing: 1px;
+    /* line-height: 40px; */
+    /* letter-spacing: 1px; */
 }
 
 .about-img:hover {
     transform: scale(1.01);
+}
+
+@media (max-width: 900px) {
+    .About-section {
+        height: 550px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20%;
+        margin-bottom: 20%;
+        padding: 7%;
+        overflow: hidden;
+    }
+
+    .about {
+        width: 100%;
+    }
+
+    .title {
+        align-self: center;
+        margin-top: 29%;
+        width: 100%;
+    }
+
+    .about-img {
+        width: 50%;
+        height: 50%;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text {
+        font-size: 14px;
+    }
+
+    .title {
+        font-size: 14px;
+    }
+
+    .about-text {
+        font-size: 14px;
+    }
+
+    .side-img {
+        width: 400px;
+        height: 280px;
+    }
 }
