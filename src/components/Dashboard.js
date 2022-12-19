@@ -1,15 +1,27 @@
-import React from 'react'
+import React from "react";
 // import NewStaff from './ NewStaff'
-import NewUnit from './NewUnit'
+import NewUnit from "./NewUnit";
 // import UpdateUnit from './UpdateUnit'
-// import './Admin.css'
-import { Link } from 'react-router-dom';
-const Dashboard = () => {
+import "./Admin.css";
+import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
+const Dashboard = ({ user, setUser }) => {
+  const navigate = useNavigate();
 
-    function handleLogout() {
-        console.log("Logged out successfully")
-    }
+  const handleLogout = () => {
+    fetch(`/staff/${user.id}`, {
+      method: "DELETE",
+    }).then((r) => {
+      if (r.ok) {
+        setUser(null);
+        navigate("/login");
+        toast.success("Logged out successfully");
+      }
+    });
+  };
+
   return (
     <div className="Admin">
       <div className="sidebar">
@@ -43,7 +55,9 @@ const Dashboard = () => {
           </li> */}
           <li>
             <Link to="">
-              <button onClick={()=>handleLogout()}>Logout</button>
+              <button onClick={() => handleLogout()} className="btn btn-danger">
+                Logout
+              </button>
             </Link>
           </li>
         </ul>
@@ -53,10 +67,9 @@ const Dashboard = () => {
         <div className="top">
           <NewUnit />
         </div>
-        
       </div>
     </div>
   );
-}
+};
 
-export default Dashboard
+export default Dashboard;

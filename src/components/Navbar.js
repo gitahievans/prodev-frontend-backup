@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../components/images/container 1.png";
 import "./Navbar.css";
 import { navItems } from "./NavItems";
 import Dropdown from "./Dropdown";
@@ -16,7 +15,8 @@ function Navbar({ user, setUser }) {
     }).then((r) => {
       if (r.ok) {
         setUser(null);
-        navigate("/signup");
+        navigate("/login");
+        localStorage.removeItem('User');
         toast.success("Logged out successfully");
       }
     });
@@ -25,18 +25,19 @@ function Navbar({ user, setUser }) {
   const [dropdown, setDropdown] = useState(false);
   return (
     <>
-      <nav className="navbar">
+      <div className="navbar">
         <div className="logo">
-          {" "}
-          <img src={logo} alt="container" />
           <Link to="/" className="navbar-logo">
-            Storage-Center
+            <p>
+              <span className="storage">STORAGE</span>
+              <span className="center">CENTER</span>
+            </p>
           </Link>
         </div>
-       
+
         <ul className="nav-items">
           {navItems.map((item) => {
-            if (item.title === "More") {
+            if (item.title === "More" && user) {
               return (
                 <li
                   key={item.id}
@@ -47,6 +48,7 @@ function Navbar({ user, setUser }) {
                   <Link to={item.path}>{item.title}</Link>
                   {dropdown && <Dropdown />}
                 </li>
+                
               );
             }
             return (
@@ -63,7 +65,7 @@ function Navbar({ user, setUser }) {
                 </Link>
               ) : null}
             </li>
-          
+
             <li>
               {user ? null : (
                 <Link to="/signup" className="logout">
@@ -79,8 +81,10 @@ function Navbar({ user, setUser }) {
               ) : null}
             </li>
           </div>
+     
         </ul>
-      </nav>
+        <i class="fa-solid fa-bars"></i>
+      </div>
     </>
   );
 }

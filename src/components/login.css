@@ -1,5 +1,5 @@
 .login-container {
-  background-color: black;
+  background-color: white;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -8,15 +8,22 @@
 }
 
 .login-form {
-  background: linear-gradient(50deg, rgba(2, 0, 36, 1) 0%, rgba(15, 208, 208, 1) 100%, rgba(0, 212, 255, 1) 100%);
-  width: 25%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.14889705882352944) 0%, rgba(245, 245, 245, 0.6446953781512605) 99%);
+  width: 60%;
+  height: 70vh;
   display: flex;
-  flex-direction: column;
-  margin: 2%;
-  padding: 1%;
-  justify-content: space-evenly;
-  border-radius: 20px;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1%;
+  padding: 5%;
+  border: 2px solid purple;
+  border-radius: 20px;
+  font-family: 'Lucida Grande';
+}
+
+.logn {
+  margin-bottom: 30px;
 }
 
 .avatar {
@@ -30,18 +37,23 @@
   margin-top: 20px;
 }
 
-.back {
-  color: black;
+.back-to-signup {
+  margin-left: 10px;
+  color: rgb(0, 128, 255);
   text-decoration: none;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 212, 255, 1) 100%, rgba(15, 232, 240, 1) 100%);
-  padding: 3px;
+  font-size: 18px;
 }
 
-
-
-
-
+.login-form form{
+  padding: 2%;
+  width: 100%;
+}
+.login-form form input{
+  width: 100%;
+}
+.login-form form button{
+  width: 100%;
+}
 
 
 

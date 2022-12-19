@@ -1,34 +1,34 @@
 import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
-// import UpdateUnit from "./UpdateUnit";
+import UpdateUnit from "./UpdateUnit";
 const Available = () => {
   const [units, setUnits] = useState([]);
   const [show, setShow] = useState(false);
   useEffect(() => {
-    fetch("/storage_units")
+    fetch("./storage_units")
       .then((r) => r.json())
       .then((data) => setUnits(data));
   }, []);
-console.log(units)
-  function handleShow() {
-    // setShow(() => !show);
+  console.log(units);
+  function handleShow(unit) {
+    setShow(() => !show);
     // console.log(show);
     <Navigate to="/edit" />;
-    console.log("redirecting to edit")
+    console.log(`redirecting to edit${unit.id}`);
   }
 
   function handleDelete(item) {
     console.log(item.id);
-    fetch(`storage_units/${item.id}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    // fetch(`https://storagecenter.onrender.com/storage_units/${item.id}`, {
+    //   method: "DELETE",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    // });
   }
 
   return (
-    <div className="">
+    <div>
       <table className="table table-dark table-striped">
         <thead>
           <tr>
@@ -48,17 +48,26 @@ console.log(units)
                 <td>{unit.name}</td>
                 <td>{unit.size}</td>
                 <td>{unit.price}</td>
-                <td>price</td>
                 <td>
-                  <button className="btn btn-primary" onClick={handleShow()}>
-                    Edit
-                  </button>
-                  <button
-                    className="btn btn-danger"
-                    onClick={handleDelete(unit)}
-                  >
-                    Delete
-                  </button>
+                  {show ? <UpdateUnit unit={unit}/> : null}
+                  <div className="available-btns">
+                    <button
+                      className="btn btn-primary"
+                      onClick={() => {
+                        handleShow(unit);
+                      }}
+                    >
+                      Edit
+                    </button>
+                    <button
+                      className="btn btn-danger"
+                      onClick={() => {
+                        handleDelete(unit);
+                      }}
+                    >
+                      Delete
+                    </button>
+                  </div>
                 </td>
               </tr>
             </tbody>

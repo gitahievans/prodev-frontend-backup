@@ -1,31 +1,24 @@
-.logo
-{
-  color: white;
-  font-weight:inherit;
-  font-size: 80px;
-}
-
-.showcase
-{
-  position: absolute;
-  right: 0;
+.showcase {
+  height: 500px;
   width: 100%;
-  min-height: 100vh;
-  padding: 100px;
+  padding: 70px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  background:black;
-  transition: 0.5s;
-  z-index: 2;
-}
-.showcase.active
-{
-  right: 300px;
+  background: whitesmoke;
+  font-family: 'Lucida Sans Regular';
 }
 
-.showcase img
-{
+.side-img {
+  width: 500px;
+  height: 380px;
+}
+
+/* .showcase.active {
+  right: 300px;
+} */
+
+/* .showcase img {
   position: absolute;
   top: 0;
   left: 0;
@@ -33,52 +26,38 @@
   height: 100%;
   object-fit: cover;
   opacity: 0.8;
-}
-.overlay
-{
-  position:inherit;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgb(153, 131, 131);
-  mix-blend-mode: overlay;
-}
-.text
-{
+} */
+.text {
   position: relative;
-  z-index: 10;
 }
 
-.text h2
-{
-  font-size: 5em;
+.text h2 {
+  font-size: 3em;
   font-weight: 800;
-  color: #fff;
+  color: black;
   line-height: 1em;
   text-transform: uppercase;
 }
-.text h3
-{
-  font-size: 4em;
+
+.text h3 {
+  font-size: 2em;
   font-weight: 700;
-  color: #fff;
+  color: black;
   line-height: 1em;
   text-transform: uppercase;
 }
-.text p
-{
+
+.text p {
   font-size: 1.1em;
-  color: #fff;
+  color: black;
   margin: 20px 0;
   font-weight: 400;
   max-width: 700px;
 }
-.text button
-{
+
+.text button {
   display: inline-block;
   font-size: 1em;
-  background: #fff;
   padding: 10px 30px;
   text-transform: uppercase;
   text-decoration: none;
@@ -88,30 +67,74 @@
   letter-spacing: 2px;
   transition: 0.2s;
 }
-.text button:hover
-{
+
+.text button:hover {
   letter-spacing: 6px;
 }
-@media (max-width: 735px)
-{
+
+@media (max-width: 735px) {
+
   .showcase,
-  .showcase header
-  
-  {
+  .showcase header {
     padding: 0.5px;
-  
+
   }
-  .text h2
-  {
-  padding: 1px;
-  font-size: 4rem;
+
+  .text h2 {
+    padding: 1px;
+    font-size: 4rem;
   }
-  .text h3
-  {
+
+  .text h3 {
     font-size: 1.5em;
   }
-  .logo{
+
+  .logo {
     display: none;
   }
 
+}
+
+@media (max-width: 900px) {
+  .showcase {
+      height: 550px;
+      background-color: whitesmoke;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20%;
+      margin-bottom: 20%;
+      padding: 7%;
+      /* overflow: hidden; */
+  }
+  .text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .text h2, .text h3{
+      text-align: center;
+      width: 75%;
+  }
+  .text h3{
+    font-weight: lighter;
+  }
+}
+
+@media (max-width: 480px) {
+  .text{
+    font-size: 14px;
+  }
+  .text h2, .text h3{
+    font-size: 14px; 
+  }
+  .text h3{
+    font-weight: lighter;
+    font-size: 12px;
+  }
+  .side-img {
+    width:90px;
+  }
 }

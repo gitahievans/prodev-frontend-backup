@@ -16,19 +16,19 @@ console.log(values);
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    fetch('/staff', {
-      method:"POST",
-      headers:{
-        "Content-Type":"applcation/json"
+    fetch("./staff", {
+      method: "POST",
+      headers: {
+        "Content-Type": "applcation/json",
       },
-      body:JSON.stringify(values)
-    }).then(r => {
+      body: JSON.stringify(values),
+    }).then((r) => {
       if (r.created) {
-        console.log("created")
+        console.log("created");
       } else {
-        r.json().then(err => setErrors(err.error))
+        r.json().then((err) => setErrors(err.error));
       }
-    })
+    });
   }
   return (
     <form

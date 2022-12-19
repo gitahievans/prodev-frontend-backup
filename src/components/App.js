@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import SignUpForm from "./SignUpForm";
 import LoginForm from "./LoginForm";
 import UserProfile from "../pages/UserProfile";
 import Contact from "../pages/Contact";
 import AboutUs from "../pages/AboutUs";
 import Dashboard from "./Dashboard";
+import Spaces from "./Spaces";
 import Navbar from "./Navbar";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./Home";
 import NewStaff from "./NewStaff";
 import Booked from "./Booked";
@@ -23,9 +24,17 @@ import UpdateUnit from "./UpdateUnit";
 
 function App() {
   const [spaceDetails, setSpaceDetails] = useState();
-  const [user, setUser] = useState(false);
+  const [user, setUser] = useState(() => {
+    // getting stored value
+    const saved = localStorage.getItem("User");
+    const initialValue = JSON.parse(saved);
+    return initialValue || false;
+  });
 
- 
+  useEffect(()=>{
+    localStorage.setItem('User', JSON.stringify(user))
+  },[user])
+
   const handleSpaceDetails = (params) => {
     setSpaceDetails(params);
   };
@@ -34,10 +43,7 @@ function App() {
     <div className="App">
       <Navbar user={user} setUser={setUser} />
       <Routes>
-        <Route
-          path="/"
-          element={<Home getSpaceDetails={handleSpaceDetails} />}
-        />
+        <Route path="/" element={<Home />} />
         <Route
           path="/login"
           element={<LoginForm user={user} setUser={setUser} />}
@@ -46,12 +52,19 @@ function App() {
         <Route element={<ProtectedRoutes user={user} setUser={setUser} />}>
           <Route path="/UserProfile" element={<UserProfile user={user} />} />
           <Route path="/Contact" element={<Contact />} />
+          <Route
+            path="/spaces"
+            element={<Spaces getSpaceDetails={handleSpaceDetails} />}
+          />
           <Route path="/AboutUs" element={<AboutUs />} />{" "}
           <Route
             path="/rentNow"
             element={<RentNow spaceDetails={spaceDetails} />}
           />
-          <Route path="/admin/dashboard" element={<Dashboard />} />
+          <Route
+            path="/admin/dashboard"
+            element={<Dashboard user={user} setUser={setUser} />}
+          />
           <Route path="/newstaff" element={<NewStaff />} />
           <Route path="/booked" element={<Booked />} />
           <Route path="/available" element={<Available />} />

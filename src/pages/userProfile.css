@@ -1,50 +1,76 @@
 .user-profile {
     display: flex;
-    justify-content: space-between;
-    border: 1px solid black;
     height: 100vh;
+    background-color: white;
+    font-family: 'Lucida Sans';
 }
 
 
 .profile {
-    background-color: blanchedalmond;
-    margin: 1%
+    background: linear-gradient(180deg, rgba(203, 226, 247, 1) 0%, rgba(252, 251, 209, 1) 75%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    padding: 1%;
 }
 
-.main2 {
-    width: 100vw;
-    height: 100vh;
+.prfl-avatar {
+    height: 80px;
+    width: auto;
+}
+
+.prfl-dtls {
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+#prfl-update {
+    width: auto;
+    margin-top: 25%;
+}
+
+#prfl-update:hover {
+    letter-spacing: 2px;
+}
+
+.bookings-area {
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
     gap: 2rem;
     justify-content: center;
-    margin-top: 1rem;
     flex-grow: 1;
-    /* margin-top: 5%; */
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
-    /* background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(15, 208, 208, 1) 100%, rgba(0, 212, 255, 1) 100%); */
+    background: aliceblue;
     padding: 5%;
 }
 
 .deets {
     width: 100%;
-    height: 100%;
-    margin: 2%;
     padding: 2%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background-color: rgba(255,255,255, 0.55);
+    justify-content: space-evenly;
+    background-color: rgba(138, 137, 137, 0.55);
     box-shadow: 5px 5px 5px black;
     border-radius: 12px;
     transition: transform 400ms ease-in;
     cursor: pointer;
 }
+
+
+.rmv-book {
+    width: 30px;
+    height: 30px;
+}
+
 .deet:hover {
     transform: scale(1.012);
 }
-.deet > img {
+
+.deet>img {
     width: 100%;
 }
 
@@ -56,4 +82,40 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.deets:hover {
+    transform: scale(1.01);
+    letter-spacing: 1px;
+}
+
+.rmv-book:hover {
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+@keyframes shake {
+
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
 }
