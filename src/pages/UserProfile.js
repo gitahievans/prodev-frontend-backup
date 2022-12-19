@@ -11,20 +11,25 @@ const UserProfile = ({ user }) => {
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
 
-  const booking = user.bookings;
-  // console.log(booking);
+  // const booking = user.bookings;
+  // console.log(user);
 
   useEffect(() => {
     fetch("bookings")
       .then((r) => r.json())
       .then((data) => setBookings(data));
-  },[]);
+  }, []);
 
   // console.log(bookings);
+  const booking = bookings.map((booking) => {
+    // console.log(booking.storage_unit.image_url);
+    return booking;
+  });
 
   const handleClick = () => {
     // fetch(`https://storagecenter.onrender.com/bookings/`,
-    fetch(`bookings/`, {
+
+    fetch(`bookings/${booking.id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -64,16 +69,34 @@ const UserProfile = ({ user }) => {
   return (
     <div className="user-profile">
       <div className="bookings-area">
-        {booking.map((book) => (
-          <div key={book.id} className="deets">
-            <p>From: {book.starting}</p>
-            <p>To: {book.ending}</p>
-            <p>
-              {book.delivery_status ? "You will be picked" : "you will bring"}
-            </p>
-            <p>
-              {book.pickup_status ? "You will be picked" : "you will bring"}
-            </p>
+        {bookings.map((booking) => (
+          <div key={booking.id} className="deets">
+            <img
+              src={booking.storage_unit.image_url}
+              alt="space"
+              className="space"
+            />
+            <div className="dtls">
+              <span>Unit Number: {booking.storage_unit.unit_number}</span>
+              <span>Size: {booking.storage_unit.size}</span>
+              <span>Price: {booking.storage_unit.price}</span>{" "}
+            </div>
+            <div className="more-details">
+              {" "}
+              <p>From: {booking.starting}</p>
+              <p>To: {booking.ending}</p>
+              <p>
+                {booking.delivery_status
+                  ? "Your goods will be brough to you"
+                  : "You will come pick your goods"}
+              </p>
+              <p>
+                {booking.pickup_status
+                  ? "Your goods will be picked"
+                  : "You will bring your goods"}
+              </p>
+            </div>
+
             <img
               className="rmv-book"
               src="https://cdn-icons-png.flaticon.com/128/6096/6096937.png"

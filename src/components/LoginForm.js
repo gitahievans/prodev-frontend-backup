@@ -10,7 +10,6 @@ function LoginPage({ user, setUser }) {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
-  const [loadingProgress, setLoadingProgress] = useState(0);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -45,10 +44,10 @@ function LoginPage({ user, setUser }) {
 
   return (
     <>
-      {isLoading && loadingProgress < 100 ? (
-        <InfinitySpin width="200" color="#4fa94d" />
-      ) : (
-        <div className="login-container">
+      <div className="login-container">
+        {isLoading ? (
+          <InfinitySpin width="200" color="#4fa94d" className="spinner" />
+        ) : (
           <div className="login-form">
             <h2 className="logn">
               <span>Storagecenter</span> | <span>Login</span>{" "}
@@ -91,8 +90,9 @@ function LoginPage({ user, setUser }) {
               </NavLink>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
+      )
     </>
   );
 }

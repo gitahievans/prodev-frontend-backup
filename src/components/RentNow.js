@@ -25,8 +25,8 @@ function RentNow({ spaceDetails }) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        start: startDate,
-        end: endDate,
+        starting: startDate,
+        ending: endDate,
         goods: goods,
         pickup_status: pickupStatus,
         delivery_status: deliveryStatus,
