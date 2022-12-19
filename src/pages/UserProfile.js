@@ -11,8 +11,8 @@ const UserProfile = ({ user }) => {
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
 
-  // const booking = user.bookings;
-  // console.log(user);
+  // const book = user.bookings;
+  console.log(user);
 
   useEffect(() => {
     fetch("bookings")
@@ -74,7 +74,7 @@ const UserProfile = ({ user }) => {
             <img
               src={booking.storage_unit.image_url}
               alt="space"
-              className="space"
+              className="space-img"
             />
             <div className="dtls">
               <span>Unit Number: {booking.storage_unit.unit_number}</span>
@@ -96,13 +96,9 @@ const UserProfile = ({ user }) => {
                   : "You will bring your goods"}
               </p>
             </div>
-
-            <img
-              className="rmv-book"
-              src="https://cdn-icons-png.flaticon.com/128/6096/6096937.png"
-              alt="Remove"
-              onClick={handleClick}
-            />
+            <button onClick={handleClick} className="prfl-update">
+              Remove
+            </button>
           </div>
         ))}
       </div>{" "}
@@ -113,40 +109,35 @@ const UserProfile = ({ user }) => {
           src="https://cdn-icons-png.flaticon.com/128/5326/5326580.png"
           alt="Avatar"
         />
-        <p>
-          Name: <span className="prfl-dtls">{user.username}</span>
-        </p>
-        <p>
-          Email: <span className="prfl-dtls">{user.email}</span>{" "}
-        </p>
-        <p>
-          Phone: <span className="prfl-dtls">{user.phone_number}</span>{" "}
-        </p>
-        <p>
-          Number of bookings :{" "}
-          <span className="prfl-dtls">{user.bookings.length}</span>{" "}
-        </p>
+        <div className="lower-dtls">
+          <p>
+            Name: <span className="prfl-dtls">{user.username}</span>
+          </p>
+          <p>
+            Email: <span className="prfl-dtls">{user.email}</span>{" "}
+          </p>
+          <p>
+            Phone: <span className="prfl-dtls">{user.phone_number}</span>{" "}
+          </p>
+          <p>
+            Number of bookings :{" "}
+            <span className="prfl-dtls">{user.bookings.length}</span>{" "}
+          </p>
+        </div>
+
         {!show ? (
-          <button
-            id="prfl-update"
-            className=" btn btn-primary"
-            onClick={() => setShow(true)}
-          >
+          <button className="prfl-update" onClick={() => setShow(true)}>
             Update profile
           </button>
         ) : (
-          <button
-            id="prfl-update"
-            className=" btn btn-primary"
-            onClick={() => setShow(false)}
-          >
+          <button className="prfl-update" onClick={() => setShow(false)}>
             Update profile
           </button>
         )}
         {show ? (
           <div className="update-form">
-            <h6 style={{ color: "blue" }}>Enter your details below</h6>
-            <form action="submit">
+            <h6 style={{ color: "blue" }}>Enter new details below</h6>
+            <form action="submit" className="update-frm">
               <input
                 type="text"
                 name="Name"
@@ -172,7 +163,7 @@ const UserProfile = ({ user }) => {
                 onChange={(e) => setPhoneNumber(e.target.value)}
               />
             </form>
-            <button onClick={handleSubmit} className=" btn btn-primary">
+            <button onClick={handleSubmit} className="prfl-update">
               Update
             </button>
           </div>
