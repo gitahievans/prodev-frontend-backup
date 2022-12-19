@@ -13,9 +13,11 @@
     align-items: center;
     width: 20%;
     padding: 1%;
+    min-width: 100px;
 }
 
 .prfl-avatar {
+    /* flex: 0 1 100px; */
     height: 80px;
     width: auto;
 }
@@ -23,6 +25,7 @@
 .prfl-dtls {
     letter-spacing: 1px;
     font-weight: bold;
+    /* flex: 0 1 100px; */
 }
 
 #prfl-update {
@@ -35,24 +38,24 @@
 }
 
 .bookings-area {
-    height: 100%;
+    height:fit-content;
+    width: 80%;
+    min-width: 100px;
+    padding: 2%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
-    gap: 2rem;
-    justify-content: center;
-    flex-grow: 1;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
-    background: aliceblue;
-    padding: 5%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 20px;
+    background-color: aliceblue;
 }
 
 .deets {
-    width: 100%;
-    padding: 2%;
+    width: 300px;
+    min-width: 100px;
+    padding: 1%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     background-color: rgba(138, 137, 137, 0.55);
     box-shadow: 5px 5px 5px black;
     border-radius: 12px;
@@ -60,10 +63,32 @@
     cursor: pointer;
 }
 
+.space-img{
+    width: 100%;
+    height: 40%;
+}
+.dtls{
+    display: flex;
+    flex-direction: column;
+    height: 20%;
+}
+
+.more-details {
+    width: 100%;
+    height: 40%;
+    margin: 3%;
+    padding: 0.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 
 .rmv-book {
     width: 30px;
     height: 30px;
+    align-self:flex-end;
 }
 
 .deet:hover {
@@ -74,51 +99,11 @@
     width: 100%;
 }
 
-.details {
-    width: 100%;
-    margin: 3%;
-    padding: 0.5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 
 .deets:hover {
     transform: scale(1.01);
-    letter-spacing: 1px;
 }
 
-.rmv-book:hover {
-    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    perspective: 1000px;
-}
-
-@keyframes shake {
-
-    10%,
-    90% {
-        transform: translate3d(-1px, 0, 0);
-    }
-
-    20%,
-    80% {
-        transform: translate3d(2px, 0, 0);
-    }
-
-    30%,
-    50%,
-    70% {
-        transform: translate3d(-4px, 0, 0);
-    }
-
-    40%,
-    60% {
-        transform: translate3d(4px, 0, 0);
-    }
-}
 
 
 /* UPDATE FORM */
@@ -137,7 +122,6 @@
     justify-content: space-evenly;
 }
 
-.update-form form input{
+.update-form form input {
     width: 100%;
 }
-
