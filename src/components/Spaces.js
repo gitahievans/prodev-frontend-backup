@@ -14,9 +14,11 @@ function Spaces({ getSpaceDetails }) {
   }, []);
 
   function handleClick(params) {
+    // console.log(params);
     getSpaceDetails(params);
     navigate("/rentNow");
   }
+
   return (
     <>
       {" "}

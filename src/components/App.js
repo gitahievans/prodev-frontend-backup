@@ -24,6 +24,7 @@ import UpdateUnit from "./UpdateUnit";
 
 function App() {
   const [spaceDetails, setSpaceDetails] = useState();
+  console.log(spaceDetails);
 
   const [user, setUser] = useState(() => {
     // getting stored value

@@ -5,7 +5,10 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./Rentnow.css";
 
+const c = console.log.bind(console);
+
 function RentNow({ spaceDetails }) {
+  c(spaceDetails);
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
   const [goods, setGoods] = useState("");
@@ -14,11 +17,9 @@ function RentNow({ spaceDetails }) {
   // const [errors, setErrors] = useState("");
   const navigate = useNavigate();
 
-  let spaceId = spaceDetails.id;
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    // fetch("https://storagecenter.onrender.com/bookings", 
+    // fetch("https://storagecenter.onrender.com/bookings",
     fetch("bookings", {
       method: "POST",
       headers: {
@@ -30,7 +31,7 @@ function RentNow({ spaceDetails }) {
         goods: goods,
         pickup_status: pickupStatus,
         delivery_status: deliveryStatus,
-        storage_unit_id: spaceId,
+        storage_unit_id: spaceDetails.id,
       }),
     }).then((res) => {
       if (res.ok) {
@@ -46,12 +47,11 @@ function RentNow({ spaceDetails }) {
   return (
     <div class="bookings-container">
       <div class="booking-form">
-        <div class="form-header">
-          <h1 className="book-space">Book this space</h1>
-        </div>
+        <h1 className="book-space">Book this space</h1>
         <div key={spaceDetails.id} className="spacedetails">
           <p>
-            <span className="d-names">Unit Number</span> | {spaceDetails.name}
+            <span className="d-names">Unit Number</span> |{" "}
+            {spaceDetails.unit_number}
           </p>
           <p>
             <span className="d-names">Unit Size</span> | {spaceDetails.size}

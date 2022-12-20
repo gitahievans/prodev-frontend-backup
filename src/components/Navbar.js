@@ -81,7 +81,7 @@ function Navbar({ user, setUser }) {
             </li>
           </div>
         </ul>
-        <i class="fa-solid fa-bars"></i>
+        <i className="fa-solid fa-bars"></i>
       </div>
     </>
   );
