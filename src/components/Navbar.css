@@ -1,6 +1,6 @@
 .navbar {
   height: 13vh;
-  background: rgb(255, 255, 255);
+  background: whitesmoke;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,39 +95,37 @@
 .deps>li>a:hover {
   background: gainsboro;
 }
-
-.fa-bars {
+.fa-bars{
   cursor: pointer;
   display: none;
 }
 
 @media (max-width: 900px) {
-  .nav-items {
+  .nav-items{
     display: none;
     flex-direction: column;
     align-items: center;
     background-color: rgb(12, 12, 56);
   }
-
-  .nav-item {
-    border: 1px solid white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 70px;
-    width: 100%;
-    margin: 2%;
-
+  .nav-item{
+      border: 1px solid white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 70px;
+      width: 100%;
+      margin: 2%;
+      
   }
-
-  .nav-item>a {
+  .nav-item>a{
     color: white;
     font-weight: bold;
   }
-
-  .fa-bars {
+  .fa-bars{
     display: block;
   }
 }
 
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+  
+}
