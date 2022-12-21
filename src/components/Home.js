@@ -14,6 +14,7 @@ function Home() {
           alt="person"
           className="about-img"
         />
+
         <div className="about">
           <h1 className="title">
             Welcome to Storage-Centre! We are the world’s best storage facility.

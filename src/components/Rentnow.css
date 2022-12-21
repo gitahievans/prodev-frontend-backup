@@ -100,9 +100,34 @@
 .booking-form .submit-btn:focus {
     opacity: 0.9;
 }
+.custom-shape-divider-top-1671614062 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1671614062 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 39px;
+}
+
+.custom-shape-divider-top-1671614062 .shape-fill {
+    fill: #0D6EFD;
+}
 
 @media screen and (min-width: 1000px) {
     .booking-form {
-        width: 60%
+        width: 50%;
+    }
+
+    .form-inputs {
+        width: 80%;
+
     }
 }
