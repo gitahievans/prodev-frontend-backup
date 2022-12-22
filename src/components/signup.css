@@ -1,16 +1,12 @@
 .signup-container {
-    background-color: white;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.14889705882352944) 0%, rgba(245, 245, 245, 0.6446953781512605) 99%);
+    ;
     display: flex;
     /* align-items: center; */
     justify-content: center;
     height: 103vh;
 
 }
-
-/* .form-input {
-    background: rgb(226, 226, 226);
-    border: 2px solid black;
-} */
 
 .form-control {
     background-color: white;
@@ -19,19 +15,20 @@
 
 .signup-form {
     border-radius: 20px;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.14889705882352944) 0%, rgba(245, 245, 245, 0.6446953781512605) 99%);
-    ;
-    width: 50vw;
+    width: 55vw;
     height: 75vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    align-items: center;
     margin-top: 4%;
     font-family: 'Lucida Grande';
     /* border: 2px solid black; */
+    box-shadow: 5px 5px 5px grey;
 }
 
+.signup-form input{
+    width: 35vw;
+  }
 
 .sign-btns {
     background-color: rgb(75, 231, 179);
