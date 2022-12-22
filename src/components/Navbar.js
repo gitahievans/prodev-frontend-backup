@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { navItems } from "./NavItems";
-import Dropdown from "./Dropdown";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
@@ -22,7 +21,6 @@ function Navbar({ user, setUser }) {
     });
   };
 
-  const [dropdown, setDropdown] = useState(false);
   return (
     <>
       <div className="navbar">
@@ -37,19 +35,6 @@ function Navbar({ user, setUser }) {
 
         <ul className="nav-items">
           {navItems.map((item) => {
-            if (item.title === "More" && user) {
-              return (
-                <li
-                  key={item.id}
-                  className={item.cName}
-                  onMouseEnter={() => setDropdown(true)}
-                  onMouseLeave={() => setDropdown(false)}
-                >
-                  <Link to={item.path}>{item.title}</Link>
-                  {dropdown && <Dropdown />}
-                </li>
-              );
-            }
             return (
               <li key={item.id} className={item.cName}>
                 <Link to={item.path}>{item.title}</Link>
@@ -81,7 +66,6 @@ function Navbar({ user, setUser }) {
             </li>
           </div>
         </ul>
-        <i class="fa-solid fa-bars"></i>
       </div>
     </>
   );

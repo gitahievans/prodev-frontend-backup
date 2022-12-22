@@ -6,107 +6,52 @@
 body {
     background-color: white;
     box-sizing: border-box;
-
+    font-family: 'Lucida Grande';
 }
 
 
 .About-section {
-    height: 550px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-
 }
 
 .about-img {
     margin-top: 3%;
-    margin-left: 1%;
-    width: 550px;
-    height: 400px;
-    transition: transform 800ms ease-in;
+    width: 280px;
+    height: 200px;
 }
-
-/* styling about */
 
 .about {
     color: black;
-    /* background: linear-gradient(90deg, rgba(226, 211, 211, 0.149) 0%, rgba(245, 245, 245, 0.6446953781512605) 99%); */
-    border-radius: 40px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    text-align: center;
-    font-weight: 700px;
-    font-family: 'Lucida Grande';
-    text-align: left;
-    width: 40%;
-    height: 400px;
     padding: 2%;
-    margin-top: 3%;
-}
-
-.title {
-    line-height: 40px;
-    font-size: 35px;
 }
 
 .about-text {
-    font-size: 19px;
-    margin-top: 20px;
-    /* line-height: 40px; */
-    /* letter-spacing: 1px; */
+    font-size: 15px;
+    margin-top: 1%;
 }
 
-.about-img:hover {
-    transform: scale(1.01);
+#need-btn {
+    width: 50%;
+    align-self: flex-start;
+    margin-bottom: 3%;
+    margin-left: 2%;
+    margin-top:0;
 }
 
-@media (max-width: 900px) {
-    .About-section {
-        height: 550px;
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 20%;
-        margin-bottom: 20%;
-        padding: 7%;
-        overflow: hidden;
+@media screen and (min-width: 768px) {
+    .about-img {
+        width: 550px;
+        height: 400px;
     }
 
     .about {
-        width: 100%;
-    }
-
-    .title {
-        align-self: center;
-        margin-top: 29%;
-        width: 100%;
-    }
-
-    .about-img {
-        width: 50%;
-        height: 50%;
-        margin-top: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .text {
-        font-size: 14px;
-    }
-
-    .title {
-        font-size: 14px;
-    }
-
-    .about-text {
-        font-size: 14px;
-    }
-
-    .side-img {
-        width: 400px;
-        height: 280px;
+        align-items: flex-start;
     }
 }
