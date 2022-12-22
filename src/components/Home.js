@@ -15,26 +15,28 @@ function Home() {
   return (
     <>
       <div className="About-section">
-        <img
-          src="https://images.pexels.com/photos/4484078/pexels-photo-4484078.jpeg?auto=compress&cs=tinysrgb&w=1600"
-          alt="person"
-          className="about-img"
-        />
         <div className="about">
-          <h1 className="title">
-            Welcome to Storage-Centre!{" "}
-            <h2>We are the world’s best storage facility.</h2>
-          </h1>
+          <h2 className="title">Welcome to Storage-Centre! </h2>{" "}
+          <h4>We are the world’s best storage facility.</h4>
           <p className="about-text ">
             We offer storage facilities at the best rates in town. Our
             facilities are secure with 24hr CCTV surveilance and fire proofed
             for any form of damage.We offer cold rooms, secure lock storage and
             ample space for any goods you have. BOOK WITH US NOW!!
           </p>
+          <button
+            onClick={handleClick}
+            id="need-btn"
+            className="btn btn-primary"
+          >
+            Explore
+          </button>
         </div>
-        <button onClick={handleClick} id="need-btn" className="btn btn-primary">
-          Explore
-        </button>
+        <img
+          className="hero-image"
+          src="https://cdn.midjourney.com/60fa8de3-e6a5-4643-a5e0-e569146833c2/grid_0.png"
+          alt=""
+        />
       </div>
       <AboutUs />
       <Contact />

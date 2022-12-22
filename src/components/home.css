@@ -11,23 +11,23 @@ body {
 
 
 .About-section {
-    background-color: rgb(255, 255, 255);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.midjourney.com/b39963ab-9d4c-4947-80a4-c724cc28d31b/grid_0.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.about-img {
-    margin-top: 3%;
-    width: 280px;
-    height: 200px;
+.hero-image {
+    display: none;
 }
 
 .about {
     color: black;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     padding: 2%;
 }
@@ -37,21 +37,123 @@ body {
     margin-top: 1%;
 }
 
+.about p {
+    color: white;
+}
+
 #need-btn {
     width: 50%;
     align-self: flex-start;
     margin-bottom: 3%;
     margin-left: 2%;
-    margin-top:0;
+    margin-top: 0;
 }
 
-@media screen and (min-width: 768px) {
-    .about-img {
-        width: 550px;
-        height: 400px;
+@media screen and (min-width: 500px) {
+    .About-section {
+        flex-direction: row;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url('https://cdn.midjourney.com/b39963ab-9d4c-4947-80a4-c724cc28d31b/grid_0.png');
+    }
+
+    .hero-image {
+        display: block;
+        width: 47%;
+        height: 280px;
     }
 
     .about {
         align-items: flex-start;
+    }
+
+    .about-text {
+        font-size: 15px;
+        margin-top: 1%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .About-section {
+        flex-direction: row;
+    }
+
+    .hero-image {
+        display: block;
+        width: 50%;
+        height: 280px;
+    }
+
+    .about {
+        align-items: flex-start;
+    }
+
+    .about-text {
+        font-size: 15px;
+        margin-top: 1%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .About-section {
+        height: 550px;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .about {
+        text-align: center;
+        text-align: left;
+        width: 40%;
+        margin-top: 3%;
+    }
+
+    .about-img {
+        margin-top: 3%;
+        margin-left: 1%;
+        width: 550px;
+        height: 400px;
+        transition: transform 800ms ease-in;
+    }
+
+    .about-text {
+        font-size: 20px;
+        width: 100%;
+        margin-top: 1%;
+    }
+
+    #need-btn {
+        width: 50%;
+        align-self: flex-start;
+    }
+
+    .hero-image {
+        height: 500px;
+        width: auto;
+    }
+}
+
+h2,
+h4 {
+    animation: color-change 5s infinite;
+}
+
+@keyframes color-change {
+    0% {
+        color: white;
+    }
+
+    50% {
+        color: aqua;
+    }
+
+    100% {
+        color: lime;
+    }
+
+    80% {
+        color: deeppink;
+    }
+
+    100% {
+        color: yellow;
     }
 }

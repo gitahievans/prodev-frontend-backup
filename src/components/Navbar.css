@@ -150,3 +150,33 @@
     align-items: center;
   }
 }
+
+.storage, .center{
+  animation: color-change 3s linear infinite;
+}
+
+@keyframes color-change {
+  200% {
+    color: red;
+  }
+
+  100% {
+    color: rgb(255, 149, 0);
+  }
+
+  140% {
+    color:rgb(255, 25, 0);
+  }
+
+  100% {
+    color: rgb(21, 137, 0);
+  }
+
+  200% {
+    color: blue;
+  }
+
+  100% {
+    color: rgb(250, 3, 250);
+  }
+}
