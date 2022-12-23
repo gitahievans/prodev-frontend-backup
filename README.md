@@ -24,7 +24,7 @@
 </div>
 
 
-> Storage-Center is  an ecommerce  web interface that can be used for obtaing storage failities. The web deals with a large range a of product interms of containers where one can obtain a storage facility in sizes according to what thry want to store. It also gives a user a chance to chose on how they will want there belongings will be transported.
+> Storage-Center is  an ecommerce  web interface that can be used for obtaing storage failities. The web deals with a large range a of product in terms of containers where one can obtain a storage facility in sizes according to what thry want to store. It also gives a user a chance to chose on how they will want there belongings will be transported.
 
 
 
