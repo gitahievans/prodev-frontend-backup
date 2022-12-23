@@ -10,7 +10,7 @@ const NewUnit = () => {
     status: "",
   });
 
-  const [errors, setErrors] = useState("");
+  const [setErrors] = useState("");
   const navigate = useNavigate();
 
   function onChange(e) {
@@ -21,7 +21,7 @@ const NewUnit = () => {
     e.preventDefault();
 
     // fetch("https://storagecenter.onrender.com/storage_units", 
-    fetch("storage_units", {
+    fetch("https://storagecenter.onrender.com/storage_units", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

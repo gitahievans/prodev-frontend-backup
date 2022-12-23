@@ -8,7 +8,7 @@ function Spaces({ getSpaceDetails }) {
 
   useEffect(() => {
     // fetch("https://storagecenter.onrender.com/storage_units")
-    fetch("storage_units")
+    fetch("https://storagecenter.onrender.com/storage_units")
       .then((r) => r.json())
       .then((data) => setContent(data));
   }, []);

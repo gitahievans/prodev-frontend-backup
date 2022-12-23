@@ -15,7 +15,7 @@ const UserProfile = ({ user }) => {
   // console.log(user);
 
   useEffect(() => {
-    fetch("bookings")
+    fetch("https://storagecenter.onrender.com/bookings")
       .then((r) => r.json())
       .then((data) => setBookings(data));
   }, []);
@@ -29,7 +29,7 @@ const UserProfile = ({ user }) => {
   const handleClick = () => {
     // fetch(`https://storagecenter.onrender.com/bookings/`,
 
-    fetch(`bookings/${booking.id}`, {
+    fetch(`https://storagecenter.onrender.com/bookings/${booking.id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -42,7 +42,7 @@ const UserProfile = ({ user }) => {
   function handleSubmit(e) {
     e.preventDefault();
     // fetch("https://storagecenter.onrender.com/login/client",
-    fetch(`clients/${user.id}`, {
+    fetch(`https://storagecenter.onrender.com/clients/${user.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

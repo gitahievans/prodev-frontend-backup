@@ -15,7 +15,7 @@ function LoginPage({ user, setUser }) {
     e.preventDefault();
     // fetch("https://storagecenter.onrender.com/login/client",
     setIsLoading(true);
-    fetch("login/client", {
+    fetch("https://storagecenter.onrender.com/login/client", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

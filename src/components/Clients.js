@@ -5,7 +5,7 @@ const Clients = () => {
   const[clients, setClients] = useState([])
   useEffect(() => {
     // fetch("https://storagecenter.onrender.com/clients")
-     fetch("clients")
+     fetch("https://storagecenter.onrender.com/clients/clients")
        .then((r) => r.json())
        .then((data) => setClients(data));
   })
