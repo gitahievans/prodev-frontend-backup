@@ -3,8 +3,10 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 3%;
   padding: 2%;
-  background-color: rgb(233, 237, 241);
+  background: linear-gradient(180deg, rgba(16, 12, 80, 0.929) 51%, rgba(62, 11, 100, 0.937) 93%);
+  color: white;
 }
+
 
 .emails {
   display: flex;
@@ -78,11 +80,12 @@
 }
 
 @media screen and (min-width: 1000px) {
+
   .emails p,
-    .socials p,
-    .phone p,
-    .address p,
-    .address span {
-      font-size: 20px;
-    }
+  .socials p,
+  .phone p,
+  .address p,
+  .address span {
+    font-size: 20px;
+  }
 }

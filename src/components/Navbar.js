@@ -43,7 +43,7 @@ function Navbar({ user, setUser }) {
           </li>
           <li>
             {user ? (
-              <Link to="/admin" className="logout">
+              <Link to="/admin">
                 Admin
               </Link>
             ) : null}
