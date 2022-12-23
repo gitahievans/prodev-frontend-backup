@@ -1,10 +1,9 @@
 .signup-container {
     background-color: white;
     display: flex;
-    /* align-items: center; */
+    align-items: center;
     justify-content: center;
-    height: 100vh;
-
+    height:75vh;
 }
 
 .form-control {
@@ -13,17 +12,15 @@
 }
 
 .signup-form {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.14889705882352944) 0%, rgba(245, 245, 245, 0.6446953781512605) 99%);
-    ;
-    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(16, 12, 80, 0.929) 31%, rgba(62, 11, 100, 0.93) 73%);
+    border-radius: 50px;
     width: 55vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 4%;
+    margin-top: 2%;
     font-family: 'Lucida Grande';
-    /* border: 2px solid black; */
-    box-shadow: 5px 5px 5px grey;
+        border-image-repeat: stretch;
 }
 
 .signup-form input{
@@ -65,19 +62,32 @@
 
 .signin {
     margin-left: 10px;
-    color: rgb(0, 128, 255);
+    color: rgb(0, 195, 255);
     text-decoration: none;
 }
 
 .signup-title {
     margin-top: 12px;
+    color: white;
+    font-size: 20px;
 }
 
 .already {
-    color: black;
-}
+        color: white;}
 
 .labels {
     color: rgb(17, 204, 204);
     font-size: 15px;
+}
+
+@media screen and (min-width: 768px) {
+    .signup-title{
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .signup-title {
+        font-size: 30px;
+    }
 }

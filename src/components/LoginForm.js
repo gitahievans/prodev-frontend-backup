@@ -52,7 +52,6 @@ function LoginPage({ user, setUser }) {
             <h2 className="logn">
               <span>Storagecenter</span> | <span>Login</span>{" "}
             </h2>
-
             <form onSubmit={handleSubmit}>
               <div className="form-floating mb-3">
                 <input

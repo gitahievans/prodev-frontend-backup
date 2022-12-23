@@ -1,31 +1,28 @@
-
-
 .login-container {
   background-color: white;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
+  height: 75vh;
   align-items: center;
 }
 
 .login-form {
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.14889705882352944) 0%, rgba(245, 245, 245, 0.6446953781512605) 99%);
+  background: linear-gradient(180deg, rgba(16, 12, 80, 0.929) 51%, rgba(62, 11, 100, 0.937) 93%);
   width: 60%;
-  height: 70vh;
+  height: 50vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: column;
-  margin-top: 1%;
   padding: 5%;
-  border: 2px solid purple;
   border-radius: 20px;
   font-family: 'Lucida Grande';
 }
 
 .logn {
   margin-bottom: 30px;
+  font-size: 20px;
 }
 
 .avatar {
@@ -55,4 +52,11 @@
 }
 .login-form form button{
   width: 100%;
+}
+
+
+@media screen and (min-width:768px){
+  .logn {
+      font-size: 30px;
+    }
 }

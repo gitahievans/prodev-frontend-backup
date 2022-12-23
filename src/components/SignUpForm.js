@@ -4,15 +4,9 @@ import "./signup.css";
 import { toast } from "react-toastify";
 
 function SignUpForm() {
-  // const [username, setUsername] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
-  // const [confirm_password, setConfirmPassword] = useState("");
-  // const [showPassword, setShowPassword] = useState(false);
-  // const [phone_number, setPhoneNumber] = useState(0);
+
   const navigate = useNavigate();
-  // const [errors, setErrors] = useState([]);
-  // const [errorMessage, setErrorMessage] = useState("");
+  
 
   const [values, setValues] = useState({
     username: "",
