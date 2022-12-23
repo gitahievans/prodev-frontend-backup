@@ -1,17 +1,9 @@
 .contacts-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  font-family: 'Lucida Grande';
-  margin-top: 2px;
-  margin-bottom: 5px;
-  height: 300px;
-
-}
-
-.cnt-img {
-  height: 400px;
-  width: 500px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3%;
+  padding: 2%;
+  background-color: rgb(233, 237, 241);
 }
 
 .emails {
@@ -19,7 +11,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 25%;
+  width: 100%;
+}
+
+.emails p,
+.socials p,
+.phone p,
+.address p,
+.address span {
+  font-size: 12px;
 }
 
 .socials {
@@ -27,7 +27,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 25%;
+  width: 100%;
 }
 
 .phone {
@@ -35,7 +35,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 25%;
+  width: 100%;
 }
 
 .address {
@@ -43,12 +43,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 25%;
+  width: 100%;
 }
 
 .cnt-icns {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
 }
 
 .price {
@@ -57,66 +57,32 @@
 
 }
 
-.card button {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-.card button:hover {
-  opacity: 0.7;
-}
-
-@media (max-width: 900px) {
-  .contacts-container{
-      height: 550px;
-      background-color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 20%;
-    padding: 7%;
-      /* overflow: hidden; */
-  }
-  .emails{
-    
+@media screen and (min-width: 650px) {
+  .contacts-container {
     display: flex;
-    width: 45%;
-    margin: 2.5%;
-    padding: 2%;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Lucida Grande';
+    margin-top: 2px;
+    margin-bottom: 5px;
+    height: 200px;
   }
-  .socials, .phone, .address{
-    
-    display: flex;
-    margin: 2.5%;
-    padding: 2%;
-    width: 45%;
+
+  .emails p,
+  .socials p,
+  .phone p,
+  .address p,
+  .address span {
+    font-size: 15px;
   }
 }
 
-@media (max-width: 480px) {
-  .contacts-container{
-      height: 550px;
-      background-color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 20%;
-    
-    padding: 7%;
-      /* overflow: hidden; */
-  }
-  .emails{
-    font-size: 14px; 
-  }
-  .socials, .phone, .address{
-    font-size: 14px;
-  }
+@media screen and (min-width: 1000px) {
+  .emails p,
+    .socials p,
+    .phone p,
+    .address p,
+    .address span {
+      font-size: 20px;
+    }
 }

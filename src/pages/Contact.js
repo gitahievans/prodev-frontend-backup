@@ -51,7 +51,7 @@ const Contact = () => {
           alt="phone"
         />
         <p>
-          <span>General Manager:</span> <span>777828282</span>
+          <span>G.Manager:</span> <span>777828282</span>
         </p>
         <p>
           <span>HR:</span> <span>777828282</span>
@@ -71,7 +71,7 @@ const Contact = () => {
           src="https://cdn-icons-png.flaticon.com/128/4643/4643473.png"
           alt="location"
         />
-        <p>Head Office</p>
+        <span>Head Office</span>
         <span>LakeView Road</span>
         <span></span>
         <span>PSC 5 BOX 7260</span> <span>APO AE 15069-8873</span>
