@@ -18,7 +18,7 @@ function Home() {
         <div className="about">
           <h2 className="title">Welcome to Storage-Centre! </h2>{" "}
           <h4>We are the world’s best storage facility.</h4>
-          <p className="about-text ">
+          <p className="home-text ">
             We offer storage facilities at the best rates in town. Our
             facilities are secure with 24hr CCTV surveilance and fire proofed
             for any form of damage.We offer cold rooms, secure lock storage and
