@@ -18,7 +18,6 @@ function RentNow({ spaceDetails }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // fetch("https://storagecenter.onrender.com/bookings", 
     fetch("https://storagecenter.onrender.com/bookings", {
       method: "POST",
       headers: {

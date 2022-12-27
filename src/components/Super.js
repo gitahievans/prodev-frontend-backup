@@ -11,7 +11,6 @@ const Super = () => {
     }
     function handleSubmit(e) {
         e.preventDefault()
-        // fetch("https://storagecenter.onrender.com/login/admin");
         fetch("https://storagecenter.onrender.com/login/admin");
     }
 

@@ -4,8 +4,7 @@ import { useState } from 'react'
 const Clients = () => {
   const[clients, setClients] = useState([])
   useEffect(() => {
-    // fetch("https://storagecenter.onrender.com/clients")
-     fetch("https://storagecenter.onrender.com/clients/clients")
+     fetch("https://storagecenter.onrender.com/clients")
        .then((r) => r.json())
        .then((data) => setClients(data));
   })

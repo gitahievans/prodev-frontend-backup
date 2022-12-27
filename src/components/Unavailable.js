@@ -5,7 +5,6 @@ const Unavailable = () => {
   const [units, setUnits] = useState([]);
   // const [show, setShow] = useState(false);
   useEffect(() => {
-    // fetch("https://storagecenter.onrender.com/storage_units")
     fetch("https://storagecenter.onrender.com/storage_units")
       .then((r) => r.json())
       .then((data) => setUnits(data));
@@ -18,7 +17,6 @@ const Unavailable = () => {
   }
   function handleDelete(item) {
     console.log(item.id);
-    // fetch(`https://storagecenter.onrender.com/storage_units/${item.id}`, 
     fetch(`https://storagecenter.onrender.com/storage_units/${item.id}`, {
       method: "DELETE",
       headers: {

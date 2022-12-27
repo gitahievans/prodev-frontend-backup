@@ -13,7 +13,6 @@ function LoginPage({ user, setUser }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    // fetch("https://storagecenter.onrender.com/login/client",
     setIsLoading(true);
     fetch("https://storagecenter.onrender.com/login/client", {
       method: "POST",

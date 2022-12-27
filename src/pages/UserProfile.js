@@ -11,24 +11,14 @@ const UserProfile = ({ user }) => {
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
 
-  // const book = user.bookings;
-  // console.log(user);
-
+  
   useEffect(() => {
     fetch("https://storagecenter.onrender.com/bookings")
       .then((r) => r.json())
       .then((data) => setBookings(data));
   }, []);
 
-  // console.log(bookings.length);
-  const booking = bookings.map((booking) => {
-    // console.log(booking.storage_unit.image_url);
-    return booking;
-  });
-
-  const handleClick = () => {
-    // fetch(`https://storagecenter.onrender.com/bookings/`,
-
+  const handleClick = (booking) => {
     fetch(`https://storagecenter.onrender.com/bookings/${booking.id}`, {
       method: "DELETE",
       headers: {
@@ -41,7 +31,6 @@ const UserProfile = ({ user }) => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    // fetch("https://storagecenter.onrender.com/login/client",
     fetch(`https://storagecenter.onrender.com/clients/${user.id}`, {
       method: "PATCH",
       headers: {
@@ -58,21 +47,15 @@ const UserProfile = ({ user }) => {
           "Personal details updated successfully. Changes will be reflected in your next login"
         );
       } else {
-        res.json().then((data) => {
-          console.log(data);
           toast.error("Could not update personal details");
-        });
-      }
-    });
-  }
+        };
+  })}
 
   return (
     <div className="user-profile">
       <div className="bookings-area">
-        {bookings.length !== 0 ? (
-          <>
-            {" "}
-            {bookings.map((booking) => (
+        {bookings.length > 0 ? 
+            bookings.map((booking) => (
               <div key={booking.id} className="deets">
                 <img
                   src={booking.storage_unit.image_url}
@@ -99,20 +82,19 @@ const UserProfile = ({ user }) => {
                       : "You will bring your goods"}
                   </p>
                 </div>
-                <button onClick={handleClick} className="prfl-update">
+                <button onClick={() => handleClick(booking)} className="prfl-update">
                   Remove
                 </button>
               </div>
-            ))}{" "}
-          </>
-        ) : (
+            ))
+         : 
           <div className="no-book">
-            <h1>You have no bookings! </h1>{" "}
+            <h1>You have no bookings! </h1>
             <span>
               Visit our Spaces section to explore some spaces you could book
             </span>
           </div>
-        )}
+        }
       </div>
       <div className="profile">
         <h2>{user.username}'s Profile</h2>

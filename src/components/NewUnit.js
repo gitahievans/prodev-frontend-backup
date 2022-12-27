@@ -19,8 +19,6 @@ const NewUnit = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-
-    // fetch("https://storagecenter.onrender.com/storage_units", 
     fetch("https://storagecenter.onrender.com/storage_units", {
       method: "POST",
       headers: {

@@ -16,7 +16,6 @@ console.log(values);
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    // fetch("https://storagecenter.onrender.com/staff", 
     fetch("https://storagecenter.onrender.com/staff", {
       method: "POST",
       headers: {

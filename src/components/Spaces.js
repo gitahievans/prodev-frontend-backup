@@ -7,7 +7,6 @@ function Spaces({ getSpaceDetails }) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // fetch("https://storagecenter.onrender.com/storage_units")
     fetch("https://storagecenter.onrender.com/storage_units")
       .then((r) => r.json())
       .then((data) => setContent(data));

@@ -5,8 +5,7 @@ const Available = () => {
   const [units, setUnits] = useState([]);
   // const [show, setShow] = useState(false);
   useEffect(() => {
-    // fetch("https://storagecenter.onrender.com/storage_units")
-    fetch("https://storagecenter.onrender.com/storage_units/storage_units")
+    fetch("https://storagecenter.onrender.com/storage_units")
       .then((r) => r.json())
       .then((data) => setUnits(data));
   }, []);
@@ -20,15 +19,12 @@ const Available = () => {
 
   function handleDelete(item) {
     console.log(item.id);
-    // fetch(`https://storagecenter.onrender.com/storage_units/${item.id}`, 
-    fetch(`https://storagecenter.onrender.com/storage_units/storage_units/${item.id}`,
-      {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
+    fetch(`https://storagecenter.onrender.com/storage_units/${item.id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
   }
 
   return (

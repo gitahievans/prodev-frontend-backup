@@ -17,8 +17,6 @@ function SignUpForm() {
     showPassword: false,
   });
 
-  // const regex = "`^(?=.*[A-Za-z])(?=.*d)[A-Za-zd]{8,}$`";
-
   function handleSubmit(e) {
     e.preventDefault();
 
