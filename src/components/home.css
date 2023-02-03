@@ -1,10 +1,8 @@
 .about-section {
     width: 100vw;
     padding: 2%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('/home/gitahievans/Development/Projects/PRO-DEV/store-center-front/public/pictures/midjany_A_large_storage_facility_spanning_a_large_area_bright_a_23a9a676-0c83-4073-8222-350b6d442823.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-color: white;
+    color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,17 +10,19 @@
 }
 
 .welcome {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),url("https://www.extensiv.com/hubfs/Skubana/Blog%20Pages/Imported_Blog_Media/interior%20of%20storage%20warehousing-1-1-1.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
     padding: 2%;
-    color: white;
     display: flex;
     justify-content: space-around;
     margin-top: 2%;
+    color: #fff;
 }
 
 .welcome img {
-    height: 150px;
-    width: auto;
-    filter: opacity(80%);
+    display: none;
 }
 
 .welcome h2 {
@@ -40,9 +40,12 @@
     font-weight: 200;
 }
 
+.lap-btn {
+    display: none;
+}
+
 .about {
     height: 90%;
-    color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -73,7 +76,9 @@
     }
 
     .welcome img {
+        display: block;
         height: 180px;
+        width: 50%;
     }
 
     .about {
@@ -82,6 +87,9 @@
 }
 
 @media screen and (min-width: 768px) {
+    .welcome{
+        background-image: none;
+    }
     .welcome h2 {
         font-size: 45px;
         margin-left: 5%;
@@ -104,9 +112,9 @@
     }
 
     .about {
-        width: 60%;
+        width: 50%;
         align-self: flex-start;
-        margin-left: 5%;
+        margin-left: 6%;
     }
 
     .home-text p {
@@ -118,26 +126,30 @@
 
 @media screen and (min-width: 1000px) {
     .welcome {
-        width: 100%;
+        width: 90%;
         margin-top: -2%;
-        margin-left: -7%;
+        margin-left: -3%;
+        margin-right: 3%;
+        color: black;
+        justify-content: center;
     }
 
     .welcome img {
         height: 350px;
-        width: 450px;
+        width: 750px;
     }
 
     .welcome h2 {
         font-size: 50px;
         height: 150px;
         width: 50%;
-        justify-content: space-between;
-        margin-top: 3%;
+        height: 350px;
+        justify-content: center;
     }
 
     .welcome h4 {
         font-size: 30px;
+        margin-top: 4%;
     }
 
     .home-text p {
@@ -151,4 +163,34 @@
     #need-btn {
         margin-top: 5%;
     }
+
+    .lap-btn {
+        display: block;
+        height: 45px;
+        width: 420px;
+        margin-top: 15%;
+        padding: 10px 16px;
+        font-size: 14px;
+        font-weight: 500;
+        border-radius: 30px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        background-color: #0d6efd;
+        color: #fff;
+        border: none;
+        box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+        transition: all 0.2s ease-in-out;
+    }
+
+    .lap-btn:hover {
+        cursor: pointer;
+        transform: translateY(-1px);
+        box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    }
+
+    .lap-btn:active {
+        transform: translateY(1px);
+        box-shadow: 0px 1px 5px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    }
+
 }

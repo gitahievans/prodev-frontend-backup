@@ -16,10 +16,15 @@ function Home() {
         <div className="welcome">
           <h2>
             STORAGE CENTER
-            <h4>We are the world’s best storage facility.</h4>
+            <h4>
+              We are the world’s best storage facility.{" "}
+              <button onClick={handleClick} className="lap-btn">
+                Explore
+              </button>
+            </h4>
           </h2>{" "}
           <img
-            src="https://cdn.midjourney.com/4ecbed0b-b5d7-49a8-a8cc-511294d7b67d/grid_0.png"
+            src="https://www.extensiv.com/hubfs/Skubana/Blog%20Pages/Imported_Blog_Media/interior%20of%20storage%20warehousing-1-1-1.jpg"
             alt=""
           />
         </div>
