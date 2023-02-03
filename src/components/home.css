@@ -1,157 +1,154 @@
-* {
-    padding: 0;
-    margin: 0;
-}
-
-body {
-    background-color: white;
-    box-sizing: border-box;
-    font-family: 'Lucida Grande';
-}
-
-
-.About-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.midjourney.com/b39963ab-9d4c-4947-80a4-c724cc28d31b/grid_0.png');
+.about-section {
+    width: 100vw;
+    padding: 2%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('/home/gitahievans/Development/Projects/PRO-DEV/store-center-front/public/midjany_A_large_storage_facility_spanning_a_large_area_bright_a_23a9a676-0c83-4073-8222-350b6d442823.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
-.hero-image {
-    display: none;
-   
+.welcome {
+    padding: 2%;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+}
+
+.welcome img {
+    height: 150px;
+    width: auto;
+    filter: opacity(80%);
+}
+
+.welcome h2 {
+    font-size: 28px;
+    font-weight: 400;
+    font-family: serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 150px;
+}
+
+.welcome h4 {
+    font-size: 20px;
+    font-weight: 200;
 }
 
 .about {
-    color: black;
+    height: 90%;
+    color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 2%;
+    justify-content: space-evenly;
+    padding: 0 2%;
 }
 
-.home-text {
-    font-size: 15px;
-    margin-top: 1%;
+
+.home-text p {
+    font-size: 20px;
+    font-weight: 200;
 }
 
-.about p {
-    color: white;
+#book-now {
+    margin-top: 10%;
+    font-weight: 300;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #need-btn {
     width: 50%;
-    align-self: flex-start;
-    margin-bottom: 3%;
-    margin-left: 2%;
-    margin-top: 0;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 20%;
 }
 
-@media screen and (min-width: 500px) {
-    .About-section {
-        flex-direction: row;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url('https://cdn.midjourney.com/b39963ab-9d4c-4947-80a4-c724cc28d31b/grid_0.png');
+@media screen and (min-width: 555px) {
+    .welcome {
+        width: 100%;
     }
 
-    .hero-image {
-        display: block;
-        width: 47%;
-        height: 280px;
+    .welcome img {
+        height: 180px;
     }
 
     .about {
-        align-items: flex-start;
-    }
-
-    .home-text {
-        font-size: 15px;
-        margin-top: 1%;
+        justify-content: space-evenly;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .About-section {
-        flex-direction: row;
+    .welcome h2 {
+        font-size: 45px;
+        margin-left: 5%;
     }
 
-    .hero-image {
-        display: block;
-        width: 50%;
-        height: 280px;
+    .welcome h4 {
+        font-size: 35px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 40px;
+        font-weight: 300;
     }
 
-       .home-text {
-        font-size: 15px;
-        margin-top: 1%;
+    .welcome img {
+        height: 250px;
+        width: 300px;
+    }
+
+    #book-now {
+        margin-top: 8%;
+    }
+
+    .about {
+        width: 60%;
+        align-self: flex-start;
+        margin-left: 5%;
+    }
+
+    .home-text p {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 25px;
+        font-weight: 200;
     }
 }
 
 @media screen and (min-width: 1000px) {
-    .About-section {
-        height: 550px;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-
-    .about {
-        text-align: center;
-        text-align: left;
-        width: 40%;
-        height: 90%;
-        justify-content: space-around;
-    }
-
-    .about-img {
-        margin-top: 3%;
-        margin-left: 1%;
-        width: 550px;
-        height: 400px;
-        transition: transform 800ms ease-in;
-    }
-
-    .home-text {
-        font-size: 20px;
+    .welcome {
         width: 100%;
-        margin-top: 1%;
+        margin-top: -2%;
+        margin-left: -7%;
+    }
+
+    .welcome img {
+        height: 350px;
+        width: 450px;
+    }
+
+    .welcome h2 {
+        font-size: 50px;
+        height: 150px;
+        width: 50%;
+        justify-content: space-between;
+        margin-top: 3%;
+    }
+
+    .welcome h4 {
+        font-size: 30px;
+    }
+
+    .home-text p {
+        font-size: 30px;
+    }
+
+    #book-now {
+        margin-top: 3%;
     }
 
     #need-btn {
-        width: 50%;
-        align-self: flex-start;
-    }
-
-    .hero-image {
-        height: 500px;
-        width: auto;
-    }
-}
-
-h2,
-h4 {
-    animation: color-change 5s infinite;
-}
-
-@keyframes color-change {
-    0% {
-        color: white;
-    }
-
-    50% {
-        color: aqua;
-    }
-
-    100% {
-        color: lime;
-    }
-
-    80% {
-        color: deeppink;
-    }
-
-    100% {
-        color: yellow;
+        margin-top: 5%;
     }
 }

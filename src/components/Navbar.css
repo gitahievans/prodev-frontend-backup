@@ -1,8 +1,8 @@
 .navbar {
-  background: linear-gradient(180deg, rgba(16, 12, 80, 0.929) 51%, rgba(62, 11, 100, 0.937) 93%);
+  background-color: black;
   display: flex;
   flex-direction: column;
-  height: 15h;
+  height: 15vh;
   width: 100vw;
   align-items: center;
   justify-content: center;
@@ -40,16 +40,17 @@
 }
 
 .nav-items a:hover {
-  background: gainsboro;
+  background: rgb(73, 1, 96);
 }
 
 .logout {
   text-decoration: none;
-  color: black;
+  color: wheat;
   font-size: 1.1rem;
   padding: 6px 16px;
+  border: none;
   border-radius: 10px;
-
+  background-color: rgb(92, 0, 120);
 }
 
 @media screen and (min-width: 768px) {

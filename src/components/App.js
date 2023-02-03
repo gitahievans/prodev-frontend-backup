@@ -16,14 +16,14 @@ import Unavailable from "./Unavailable";
 import Client from "./Clients";
 import Admin from "./Admin";
 import RentNow from "./RentNow";
+import '../App.css'
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ProtectedRoutes from "./ProtectedRoutes";
-// import Super from "./Super";
 import UpdateUnit from "./UpdateUnit";
 
 function App() {
-  const [spaceDetails, setSpaceDetails] = useState();
+  const [spaceDetails, setSpaceDetails] = useState([]);
 
   const [user, setUser] = useState(() => {
     // getting stored value

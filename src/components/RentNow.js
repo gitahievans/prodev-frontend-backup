@@ -11,7 +11,6 @@ function RentNow({ spaceDetails }) {
   const [goods, setGoods] = useState("");
   const [pickupStatus, setPickupStatus] = useState("");
   const [deliveryStatus, setDeliveryStatus] = useState("");
-  // const [errors, setErrors] = useState("");
   const navigate = useNavigate();
 
   let spaceId = spaceDetails.id;
