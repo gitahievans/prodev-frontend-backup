@@ -1,21 +1,20 @@
 import React, { useState } from "react";
 
 const NewStaff = () => {
-
   const [values, setValues] = useState({
     username: "",
     password: "",
-    email: ""
-  })
-  const[errors, setErrors] = useState("")
+    email: "",
+  });
+  const [errors, setErrors] = useState("");
 
   function handleChange(e) {
-    setValues({...values, [e.target.name]:e.target.value})
+    setValues({ ...values, [e.target.name]: e.target.value });
   }
-console.log(values);
+  console.log(values);
 
   const handleSubmit = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     fetch("https://storagecenter.onrender.com/staff", {
       method: "POST",
       headers: {
@@ -29,13 +28,10 @@ console.log(values);
         r.json().then((err) => setErrors(err.error));
       }
     });
-  }
+  };
   return (
-    <form
-      className="row g-3 needs-validation"
-      onSubmit={handleSubmit}
-    >
-      <p className="error">{ errors}</p>
+    <form className="row g-3 needs-validation" onSubmit={handleSubmit}>
+      <p className="error">{errors}</p>
       <div className="col-md-4">
         <label htmlFor="validationCustom01" className="form-label">
           Username

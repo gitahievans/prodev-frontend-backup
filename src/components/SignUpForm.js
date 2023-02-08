@@ -4,9 +4,7 @@ import "./signup.css";
 import { toast } from "react-toastify";
 
 function SignUpForm() {
-
   const navigate = useNavigate();
-  
 
   const [values, setValues] = useState({
     username: "",

@@ -30,41 +30,34 @@ function Navbar({ user, setUser }) {
           </p>
         </Link>
       </div>
-        <div className="nav-items">
-          <li>
-            <Link to="./">Home</Link>{" "}
-          </li>
-          <li>
-            {" "}
-            <Link to="./spaces">Spaces</Link>
-          </li>
-          <li>
-            <Link to="./UserProfile">Profile</Link>{" "}
-          </li>
-          <li>
-            {user ? (
-              <Link to="/admin">
-                Admin
-              </Link>
-            ) : null}
-          </li>
-          <li>
-            {user ? null : (
-              <Link to="/signup" className="logout">
-                Signup
-              </Link>
-            )}
-          </li>
-          <li>
-            {user ? (
-              <button type="submit" onClick={handleClick} className="logout">
-                Logout
-              </button>
-            ) : null}
-          </li>
-        </div>
+      <div className="nav-items">
+        <li>
+          <Link to="./">Home</Link>{" "}
+        </li>
+        <li>
+          {" "}
+          <Link to="./spaces">Spaces</Link>
+        </li>
+        <li>
+          <Link to="./UserProfile">Profile</Link>{" "}
+        </li>
+        <li>{user ? <Link to="/admin">Admin</Link> : null}</li>
+        <li>
+          {user ? null : (
+            <Link to="/signup" className="logout">
+              Signup
+            </Link>
+          )}
+        </li>
+        <li>
+          {user ? (
+            <button type="submit" onClick={handleClick} className="logout">
+              Logout
+            </button>
+          ) : null}
+        </li>
       </div>
-    
+    </div>
   );
 }
 

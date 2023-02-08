@@ -3,11 +3,11 @@ import { useNavigate } from "react-router-dom";
 
 const NewUnit = () => {
   const [state, setState] = useState({
-    name: "",
+    unit_number: "",
     size: "",
     price: "",
     image_url: "",
-    status: "",
+    availability: "",
   });
 
   const [setErrors] = useState("");
@@ -46,7 +46,7 @@ const NewUnit = () => {
           </label>
           <input
             type="number"
-            name="name"
+            name="unit_number"
             onChange={onChange}
             className="form-control form-control-lg"
             id="exampleInputEmail1"
@@ -100,7 +100,7 @@ const NewUnit = () => {
             is it Available:
           </label>
           <select
-            name="status"
+            name="availability"
             className="form-control form-control-lg"
             aria-label=".form-select-lg example"
             onChange={onChange}

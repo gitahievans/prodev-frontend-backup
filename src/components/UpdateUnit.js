@@ -1,9 +1,7 @@
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-
-const UpdateUnit = ({id}) => {
-
+const UpdateUnit = ({ id }) => {
   const [state, setState] = useState({
     name: "",
     size: "",
@@ -38,7 +36,7 @@ const UpdateUnit = ({id}) => {
       }
     });
   }
-  
+
   return (
     <div>
       <form onSubmit={handleSubmit} className="edit-unit">
@@ -105,6 +103,6 @@ const UpdateUnit = ({id}) => {
       </form>
     </div>
   );
-}
+};
 
-export default UpdateUnit
+export default UpdateUnit;

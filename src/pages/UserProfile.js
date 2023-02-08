@@ -11,7 +11,6 @@ const UserProfile = ({ user }) => {
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
 
-  
   useEffect(() => {
     fetch("https://storagecenter.onrender.com/bookings")
       .then((r) => r.json())
@@ -47,54 +46,58 @@ const UserProfile = ({ user }) => {
           "Personal details updated successfully. Changes will be reflected in your next login"
         );
       } else {
-          toast.error("Could not update personal details");
-        };
-  })}
+        toast.error("Could not update personal details");
+      }
+    });
+  }
 
   return (
     <div className="user-profile">
       <div className="bookings-area">
-        {bookings.length > 0 ? 
-            bookings.map((booking) => (
-              <div key={booking.id} className="deets">
-                <img
-                  src={booking.storage_unit.image_url}
-                  alt="space"
-                  className="space-img"
-                />
-                <div className="dtls">
-                  <span>Unit Number: {booking.storage_unit.unit_number}</span>
-                  <span>Size: {booking.storage_unit.size}</span>
-                  <span>Price: {booking.storage_unit.price}</span>{" "}
-                </div>
-                <div className="more-details">
-                  {" "}
-                  <p>From: {booking.starting}</p>
-                  <p>To: {booking.ending}</p>
-                  <p>
-                    {booking.delivery_status
-                      ? "Your goods will be brough to you"
-                      : "You will come pick your goods"}
-                  </p>
-                  <p>
-                    {booking.pickup_status
-                      ? "Your goods will be picked"
-                      : "You will bring your goods"}
-                  </p>
-                </div>
-                <button onClick={() => handleClick(booking)} className="prfl-update">
-                  Remove
-                </button>
+        {bookings.length > 0 ? (
+          bookings.map((booking) => (
+            <div key={booking.id} className="deets">
+              <img
+                src={booking.storage_unit.image_url}
+                alt="space"
+                className="space-img"
+              />
+              <div className="dtls">
+                <span>Unit Number: {booking.storage_unit.unit_number}</span>
+                <span>Size: {booking.storage_unit.size}</span>
+                <span>Price: {booking.storage_unit.price}</span>{" "}
               </div>
-            ))
-         : 
+              <div className="more-details">
+                {" "}
+                <p>From: {booking.starting}</p>
+                <p>To: {booking.ending}</p>
+                <p>
+                  {booking.delivery_status
+                    ? "Your goods will be brough to you"
+                    : "You will come pick your goods"}
+                </p>
+                <p>
+                  {booking.pickup_status
+                    ? "Your goods will be picked"
+                    : "You will bring your goods"}
+                </p>
+              </div>
+              <button
+                onClick={() => handleClick(booking)}
+                className="prfl-update"
+              >
+                Remove
+              </button>
+            </div>
+          ))
+        ) : (
           <div className="no-book">
             <h1>You have no bookings! </h1>
             <span>
               Visit our Spaces section to explore some spaces you could book
             </span>
           </div>
-        }
+        )}
       </div>
       <div className="profile">
         <h2>{user.username}'s Profile</h2>

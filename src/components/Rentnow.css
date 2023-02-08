@@ -9,18 +9,18 @@
 }
 
 .booking-form {
-    background-color: #39e1e1;
-    width: 85%;
+background: linear-gradient(180deg, rgba(16, 12, 80, 0.929) 51%, rgba(62, 11, 100, 0.937) 93%);    width: 85%;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: #fff;
 }
 
 .spacedetails {
     width: 100%;
-    color: rgb(7, 32, 99);
+    color: white;
     font-size: 20px;
     display: flex;
     flex-direction: column;
@@ -72,7 +72,7 @@
 }
 
 .form-text {
-    color: black;
+    color: white;
     font-size: 18px;
     align-self: flex-start;
 }

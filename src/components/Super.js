@@ -1,18 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
 const Super = () => {
-    const [state, setState] = useState({
-        name: "",
-        password:""
-    })
+  const [state, setState] = useState({
+    name: "",
+    password: "",
+  });
 
-    function handleChange(e) {
-        setState({...state, [e.target.name]: e.target.value})
-    }
-    function handleSubmit(e) {
-        e.preventDefault()
-        fetch("https://storagecenter.onrender.com/login/admin");
-    }
+  function handleChange(e) {
+    setState({ ...state, [e.target.name]: e.target.value });
+  }
+  function handleSubmit(e) {
+    e.preventDefault();
+    fetch("https://storagecenter.onrender.com/login/admin");
+  }
 
   return (
     <div>
@@ -46,6 +46,6 @@ const Super = () => {
       </form>
     </div>
   );
-}
+};
 
-export default Super
+export default Super;
